@@ -21,32 +21,32 @@ body {
 .rec p:nth-of-type(1) {
     background: #f00;
     transform: rotateY(0deg) translateZ(100px);
-    animation: go1 3s 1.5s ease-in alternate infinite;
+    animation: go1 3s 2s ease-in alternate infinite;
 }
 .rec p:nth-of-type(2) {
     background: #0f0;
     transform: rotateY(90deg) translateZ(100px);
-    animation: go2 3s 1.5s ease-in alternate infinite;
+    animation: go2 3s 2s ease-in alternate infinite;
 }
 .rec p:nth-of-type(3) {
     background: #00f;
     transform: rotateY(180deg) translateZ(100px);
-    animation: go3 3s 1.5s ease-in alternate infinite;
+    animation: go3 3s 2s ease-in alternate infinite;
 }
 .rec p:nth-of-type(4) {
     background: #ff0;
     transform: rotateY(270deg) translateZ(100px);
-    animation: go4 3s 1.5s ease-in alternate infinite;
+    animation: go4 3s 2s ease-in alternate infinite;
 }
 .rec p:nth-of-type(5) {
     background: #0ff;
     transform: rotateX(90deg) translateZ(100px);
-    animation: go5 3s 1.5s ease-in alternate infinite;
+    animation: go5 3s 2s ease-in alternate infinite;
 }
 .rec p:nth-of-type(6) {
     background: #f0f;
     transform: rotateX(270deg) translateZ(100px);
-    animation: go6 3s 1.5s ease-in alternate infinite;
+    animation: go6 3s 2s ease-in alternate infinite;
 }
 @keyframes rec {
     0% {
@@ -121,5 +121,32 @@ body {
     }
     100% {
         transform: rotateX(270deg) translateZ(350px);
+    }
+}
+.cir {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 0;
+    border-radius: 50%;
+    border: 8px solid #999;
+    border-top: 8px solid #f00;
+
+    animation: cir 2s ease-in-out;
+
+    opacity: 0;
+}
+@keyframes cir {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
     }
 }
