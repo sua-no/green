@@ -78,7 +78,7 @@ header .head ul li img {
 .subTop .subTitle {
     width: 100%;
     height: 185px;
-    background: url("../img/subtitle_event.jpg") no-repeat;
+    background: url("../img/member.jpg") no-repeat;
     background-size: cover;
 }
 .subTop .subTitle h2 {
@@ -133,183 +133,77 @@ header .head ul li img {
     background-size: cover;
     background-position: center;
 }
-.contents .subBanner {
-    width: 1480px;
-    height: 230px;
-    margin: 0 auto 110px;
+.contents .login {
     background: #eee;
-    display: flex;
-    flex-direction: row;
-    position: relative;
+    width: 650px;
+    height: 380px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
 }
-.contents .subBanner .bannerText {
-    width: 1012px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.contents .subBanner .bannerText strong {
-    margin-bottom: 25px;
+.contents .login h3 {
     font-size: 1.625em;
     text-align: center;
+    margin-bottom: 40px;
 }
-.contents .subBanner .bannerText i {
-    font-style: normal;
-    color: #999;
-    text-align: center;
-}
-.contents .subBanner .bannerImg {
-    width: 350px;
-    height: 207px;
-    background: url("../img/subscription_banner_magazine.png") no-repeat;
-    background-size: cover;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.contents .magazine {
-    width: 1480px;
-    margin: 0 auto 120px;
-    border-bottom: 1px solid #999;
-}
-.contents .magazine ul {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    padding-bottom: 90px;
-}
-.contents .magazine ul li {
-    width: 368px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.contents .magazine ul li .magazineImg {
-    width: 192px;
-    height: 231px;
-    margin: 0 auto 27px;
-}
-.contents .magazine ul li .magazineImg img {
-    width: 100%;
-    height: 100%;
-}
-.contents .magazine ul li .magazineText {
-}
-.contents .magazine ul li .magazineText h4 {
-    font-size: 1.25em;
-    margin-bottom: 5px;
-}
-.contents .magazine ul li .magazineText p {
-    margin-bottom: 36px;
-}
-.contents .magazine ul li .magazineText p:nth-of-type(1) {
-    color: #999;
-}
-.contents .magazine ul li .magazineText p:nth-of-type(2) {
-}
-.contents .magazine ul li .magazineText a {
-    width: 90px;
-    height: 35px;
-    border: 1px solid #333;
-    transition: 0.2s linear;
-}
-.contents .magazine ul li .magazineText span {
-    width: 100%;
-    height: 100%;
-    line-height: 35px;
-    text-align: center;
-    font-size: 0.75em;
-}
-.contents .magazine ul li .magazineText a:hover {
-    background: #fdd000;
+input,
+button {
     border: none;
+    background: transparent;
 }
-.contents .subInfo {
-    width: 1008px;
-    height: 275px;
-    background: #eee;
+.contents .login .id,
+.pw {
+    width: 450px;
+    height: 40px;
+    border-bottom: 2px solid #fff;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
 }
-.contents .subInfo ul {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: space-between;
-    flex-wrap: wrap;
-    padding: 50px 45px;
-    position: relative;
-}
-.contents .subInfo ul li {
-    width: 170px;
-    height: 50%;
-    position: relative;
-}
-.contents .subInfo ul li a {
+.contents .login .id input {
     width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-    position: absolute;
-    left: calc(50% - 80px);
-    top: calc(50% - 27px);
-}
-.contents .subInfo ul li a img {
-    width: 36px;
-    height: 36px;
-    vertical-align: middle;
-}
-.contents .subInfo ul li p {
-    width: 115px;
-    display: inline-block;
-    font-size: 1.25em;
-    font-weight: 600;
-    text-align: left;
-}
-.contents .subInfo ul:after {
-    display: block;
-    content: "";
-    background: #333;
-    width: 1px;
-    height: 205px;
-    position: absolute;
-    right: 0;
-    top: 13%;
-}
-.contents .subInfo .subCenter {
-    width: 50%;
     height: 100%;
-    padding: 55px 140px;
 }
-.contents .subInfo .subCenter h3 {
-    font-size: 1.25em;
+.contents .login .pw input {
+    width: 100%;
+    height: 100%;
+}
+.contents .login .pw {
+    margin-bottom: 24px;
+}
+.contents .login .loginBox {
+    width: 353px;
+    height: 35px;
+    background: #fdd000;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 auto 20px;
 }
-.contents .subInfo .subCenter p {
-    color: #666;
+.contents .login .loginBox button {
+    font-weight: bold;
     font-size: 1.25em;
-    text-align: center;
-    margin-bottom: 8px;
+    align-items: center;
 }
-.contents .subInfo .subCenter span {
+.contents .login .idSave {
+    text-align: center;
+    margin-bottom: 42px;
+}
+.contents .login .idSave input {
+}
+.contents .login .join {
+    margin: 0 auto;
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+}
+.contents .login .join a {
     color: #666;
-    display: block;
     font-size: 0.875em;
-    text-align: center;
-    margin-bottom: 13px;
+    position: relative;
 }
-
+.contents .login .join a:first-child::after {
+    content: "|";
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
 footer {
     width: 100%;
     height: 260px;
@@ -371,18 +265,4 @@ footer div p {
     white-space: pre-line;
     color: #fff;
     line-height: 2em;
-}
-.top {
-    width: 37px;
-    height: 37px;
-    position: fixed;
-    right: 28px;
-    bottom: 260px;
-}
-.top a {
-    width: 100%;
-    height: 100%;
-    background: url("../img/top.png") no-repeat;
-    background-size: cover;
-    background-position: center;
 }
