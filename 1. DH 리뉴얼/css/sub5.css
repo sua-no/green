@@ -72,137 +72,107 @@ header .head ul li img {
     width: 100%;
     height: 100%;
 }
-.subTop {
+.searchNav {
     width: 100%;
-}
-.subTop .subTitle {
-    width: 100%;
-    height: 185px;
-    background: url("../img/member.jpg") no-repeat;
-    background-size: cover;
-}
-.subTop .subTitle h2 {
-    text-transform: uppercase;
-    font-family: "Baskerville BT";
-    font-size: 2.375em;
-    text-align: center;
-    line-height: 185px;
-    color: #fff;
-}
-.contents {
-    width: 100%;
-    height: 100%;
+    background: #fdd000;
+    height: 50px;
     margin-bottom: 120px;
 }
-.contents .siteNav {
+.searchNav ul {
+    width: 780px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.searchNav ul li {
+    height: 100%;
+}
+.searchNav ul li a {
+    font-weight: bold;
+    line-height: 50px;
+    padding: 0 8px;
+}
+.searchNav ul li:first-child a {
+    background: #fff;
+    position: relative;
+}
+.searchNav ul li:first-child a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fdd000;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: 0;
+}
+.searchNav ul li:hover a {
+    background: #fff;
+}
+.searchPage {
     width: 1480px;
     margin: 0 auto;
-    padding: 35px 0;
-    text-align: left;
 }
-.contents .siteNav .home {
-    padding: 0 20px;
-    font-size: 0.875em;
-    font-weight: 600;
-    margin-right: 20px;
-}
-.contents .siteNav span {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background: url("../img/arrow.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-right: 20px;
-}
-.contents .siteNav .subName {
-    padding: 0 20px;
-    font-size: 0.875em;
-    font-weight: 600;
-    position: relative;
-}
-.contents .siteNav .subName:after {
-    display: block;
-    width: 8px;
-    height: 8px;
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 3px;
-    background: url("../img/triangle.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.contents .login {
-    background: #eee;
-    width: 650px;
-    height: 380px;
-    margin: 0 auto;
-    padding: 40px 0 20px;
-}
-.contents .login h3 {
-    font-size: 1.625em;
-    text-align: center;
-    margin-bottom: 40px;
-}
-input,
-button {
-    border: none;
-    background: transparent;
-}
-.contents .login .id,
-.pw {
-    width: 450px;
-    height: 40px;
-    border-bottom: 2px solid #fff;
-    margin: 0 auto;
-}
-.contents .login .id input {
+.searchPage p {
     width: 100%;
-    height: 100%;
+    border-bottom: 1px solid #333;
+    font-size: 1.125em;
+    margin-bottom: 80px;
+    padding-bottom: 10px;
 }
-.contents .login .pw input {
+.searchPage p span {
+    color: #ff8a00;
+}
+.searchPage ul {
     width: 100%;
-    height: 100%;
 }
-.contents .login .pw {
-    margin-bottom: 24px;
-}
-.contents .login .loginBox {
-    width: 353px;
-    height: 35px;
-    background: #fdd000;
-    text-align: center;
-    margin: 0 auto 20px;
-}
-.contents .login .loginBox button {
-    font-weight: bold;
-    font-size: 1.25em;
+.searchPage ul li {
+    width: 100%;
+    height: 260px;
+    padding: 30px 80px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
-.contents .login .idSave {
-    text-align: center;
-    margin-bottom: 42px;
+.searchPage ul li:hover dl dt:after {
+    opacity: 1;
+    width: 100%;
 }
-.contents .login .idSave input {
+.searchPage ul li a {
+    width: 200px;
+    height: 200px;
 }
-.contents .login .join {
-    margin: 0 auto;
-    width: 225px;
-    display: flex;
-    justify-content: space-between;
+.searchPage ul li a img {
+    width: 100%;
+    height: 100%;
 }
-.contents .login .join a {
-    color: #666;
-    font-size: 0.875em;
+.searchPage ul li dl {
+    width: 988px;
+    height: 177px;
+}
+.searchPage ul li dl dt {
+    font-size: 1.125em;
+    font-weight: 700;
+    margin-bottom: 40px;
     position: relative;
 }
-.contents .login .join a:first-child::after {
-    content: "|";
+.searchPage ul li dl dt:after {
     display: block;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: #fdd000;
     position: absolute;
-    right: -20px;
-    top: 0;
+    left: 0;
+    bottom: -5px;
+    opacity: 0;
+}
+.searchPage ul li dl dd {
 }
 footer {
     width: 100%;
@@ -265,4 +235,18 @@ footer div p {
     white-space: pre-line;
     color: #fff;
     line-height: 2em;
+}
+.top {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    right: 28px;
+    bottom: 260px;
+}
+.top a {
+    width: 100%;
+    height: 100%;
+    background: url("../img/top.png") no-repeat;
+    background-size: cover;
+    background-position: center;
 }
