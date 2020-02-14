@@ -1,0 +1,21 @@
+html,body{
+    margin: 0; padding: 0 
+}
+ul,li{
+    list-style-type: none;
+}
+a{
+    color: #95979d; 
+    text-decoration: none;}
+span,em,strong,a{
+    display: inline-block;
+}
+*{
+    margin: 0;
+    font-family: '';
+    font-size: 14px;
+    color: #95979d;
+    font-family: 'arial'
+    color: #000
+    box-sizing:border-box
+}

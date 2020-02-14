@@ -1,0 +1,27 @@
+@import url('common.css');
+.public{width: 900px; background: #fff; 
+    margin: 100px auto; padding: 60px; }
+.public h2{font-size: 2em; color: #333; 
+    text-align: center; padding-bottom: 40px;}
+.public .p_all{border: 10px solid #333; 
+    padding: 60px;}
+.public .p_all h3{font-size: 1.6em; text-align: center; color: #333; padding-bottom: 20px; 
+}
+.public .p_all h3 small{display: block;
+        line-height: 3;}
+.public .p_all dl{border: 2px solid #aaa; 
+    padding: 0 10px;}
+.public .p_all dl dt{padding: 10px 0;}
+.public .p_all dl dd{border-top: 1px solid #ddd;     padding: 10px 0 10px 16px; position: relative; background: url('../img/icon3.png') 5px center no-repeat;
+     }
+.public .p_all dl dd input{position: absolute;
+    right: 5px; top: 13px; }
+.public .p_all dl dd em{color: #f00;
+    font-style: normal;}
+
+/*.public .p_all input[type='submit']*/
+.public .p_all div{text-align: center;}
+.public .p_all div input {background: #aaa;
+    color: #fff; width: 90px; height: 35px;
+    padding: 10px 30px;border: none;
+    margin-top: 20px;}

@@ -1,0 +1,246 @@
+@import url("common.css");
+#wrap {
+}
+
+#wrap header {
+    background: #30373b;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 16%;
+    height: 100%;
+    z-index: 100;
+}
+#wrap header a {
+    width: 100%;
+    height: 124px;
+    padding: 31px 88px;
+    background: #fff;
+}
+#wrap header nav {
+    position: relative;
+}
+#wrap header nav ul {
+}
+
+#wrap header nav ul li {
+    color: #fff;
+    text-align: right;
+    padding: 24px 30px 24px 0;
+}
+#wrap header nav ul:nth-of-type(1) {
+}
+#wrap header nav ul:nth-of-type(1) li {
+    background: #31393d;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #333;
+    transition: 0.35s;
+}
+#wrap header nav ul:nth-of-type(1) li:nth-of-type(1) {
+    background: #282f32;
+}
+#wrap header nav ul:nth-of-type(1) li:nth-of-type(3) {
+    background: #30383c;
+}
+#wrap header nav ul:nth-of-type(1) li:nth-of-type(4) {
+    background: #32393d;
+}
+#wrap header nav ul:nth-of-type(1) li:nth-of-type(5) {
+    background: #343b3f;
+}
+#wrap header nav ul:nth-of-type(1) li:nth-of-type(6) {
+    background: #363e41;
+}
+#wrap header nav ul:nth-of-type(1) li:hover {
+    background: #29b4b2;
+}
+#wrap header nav ul:nth-of-type(2) {
+    height: 300px;
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
+#wrap header nav ul:nth-of-type(2) li {
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    transition: 0.35s;
+}
+#wrap header nav ul:nth-of-type(2) li:hover {
+    font-weight: bold;
+}
+
+#wrap header nav ul:nth-of-type(2) li:first-of-type {
+    color: #29b4b2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 22px;
+    position: relative;
+    left: 208px;
+    text-align: left;
+}
+#wrap header nav ul:nth-of-type(2) li:first-of-type::after {
+    background: url("../img/png1_03.png") no-repeat;
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    left: 61px;
+    top: 26px;
+}
+#wrap header nav ul:nth-of-type(3) {
+    width: 227px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    right: 30px;
+}
+#wrap header nav ul:nth-of-type(3) li {
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/png1_02.png");
+}
+
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(1) {
+    background-position: left 50%;
+}
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(2) {
+    background-position: -33px 50%;
+}
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(3) {
+    background-position: -66px 50%;
+}
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(4) {
+    background-position: -100px 50%;
+}
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(5) {
+    background-position: -133px 50%;
+}
+#wrap header nav ul:nth-of-type(3) li:nth-of-type(6) {
+    background-position: -166px 50%;
+}
+#wrap header p {
+    font-size: 12px;
+    color: #6b7072;
+    position: absolute;
+    right: 30px;
+    top: 850px;
+}
+
+#wrap section {
+    position: relative;
+    left: 16%;
+    width: 84%;
+    padding: 0;
+}
+#wrap section figure {
+    position: relative;
+    padding: 0;
+}
+#wrap section figure:hover figcaption {
+    opacity: 1;
+}
+#wrap section figure img {
+    width: 100%;
+}
+#wrap section figure figcaption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(48, 187, 182, 0.9) url("../img/arrow.png") no-repeat;
+    background-position: 50% 65%;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+#wrap section figure figcaption strong {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+#wrap section figure figcaption small {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 35%;
+    top: 38%;
+}
+#wrap section figure figcaption span {
+    width: 107px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: calc(50% - 53px);
+    top: 52%;
+}
+#wrap aside {
+    width: 90px;
+    height: 90px;
+    background: #29b4b2 url("../img/aside.png") no-repeat center;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+#wrap aside:hover div {
+    opacity: 1;
+}
+#wrap aside div {
+    width: 284px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    bottom: -145%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    padding-left: 47px;
+    justify-content: space-around;
+    opacity: 0;
+    transition: 01s;
+}
+#wrap aside div p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+#wrap aside div p:before {
+}
+@media (max-width: 992px) {
+    #wrap header {
+        height: auto;
+        width: 100%;
+    }
+    #wrap header ul:nth-of-type(1) {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(to bottom, #333b3f, #2e363a);
+        margin: 0 !important;
+        padding: 18px auto;
+    }
+    #wrap header nav ul:nth-of-type(2),
+    #wrap header nav ul:nth-of-type(3) {
+        display: none;
+    }
+    #wrap header nav ul li {
+        padding: 24px 0;
+        text-align: center;
+    }
+    #wrap section {
+        width: 100%;
+        left: 0;
+    }
+    #wrap section figure {
+    }
+}

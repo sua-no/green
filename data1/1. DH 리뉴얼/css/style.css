@@ -1,0 +1,344 @@
+@import url("common.css");
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+/* font-family: 'Noto Sans KR', sans-serif; */
+#wrap {
+    width: 1920px;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header .head {
+    width: 1720px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head .logo {
+    width: 165px;
+    height: 34px;
+}
+
+header .head .logo img {
+    width: 100%;
+    height: 100%;
+}
+header .head .search {
+    width: 450px;
+    height: 30px;
+    border: 2px solid #fdd000;
+    position: relative;
+}
+header .head .search input {
+    width: 400px;
+    border: none;
+    text-indent: 20px;
+}
+header .head .search a:nth-of-type(1) {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 35px;
+    top: calc(50% - 3px);
+    background: url("../img/triangle.png") no-repeat center;
+    background-size: 7px;
+}
+
+header .head .search a:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    background: #fdd000 url(../img/search.png) no-repeat center;
+    background-size: 13px;
+}
+header .head ul {
+    width: 200px;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head ul li {
+    width: 19px;
+    height: 19px;
+}
+header .head ul li img {
+    width: 100%;
+    height: 100%;
+}
+#visual {
+    width: 1720px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#visual ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#visual ul li {
+    width: 344px;
+    height: 100%;
+}
+#visual ul li a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#visual ul li:nth-of-type(1) a {
+    background: url("../img/visual1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#visual ul li:nth-of-type(2) a {
+    background: url("../img/visual2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#visual ul li:nth-of-type(3) a {
+    background: url("../img/visual3.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#visual ul li:nth-of-type(4) a {
+    background: url("../img/visual4.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#visual ul li:nth-of-type(5) a {
+    background: url("../img/visual5.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#visual ul li a:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#visual ul li p {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 1720px;
+    margin: 70px auto;
+}
+.menu ul {
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu ul li {
+}
+.menu ul li a {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.contents1 {
+    width: 100%;
+    height: 1225px;
+    background: #eee;
+    margin: 250px auto 0;
+}
+.banner {
+    width: 1480px;
+    height: 550px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner ul {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    display: flex;
+    flex-direction: column;
+}
+.banner ul li {
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    padding: 54px 0 38px 54px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.banner ul li h3 {
+    font-size: 1.25em;
+    margin-bottom: 51px;
+}
+.banner ul li h3:before {
+    display: block;
+    content: "";
+    width: 90px;
+    height: 30px;
+    background: url("../img/logo_happy.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.banner ul li p {
+    margin-bottom: 35px;
+}
+.banner ul li a:first-child {
+    
+}
+.banner ul li a:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#articleText {
+    width: 1720px;
+    margin: 0 auto;
+}
+#articleText h3 {
+    font-size: 1.625em;
+    margin-bottom: 24px;
+    text-align: center;
+}
+#articleText ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#articleText ul li{
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+}
+#articleText ul li .articleImg{
+    width: 460px;
+    height: 230px;
+}
+#articleText ul li .articleImg a{
+    width: 100%;
+    height: 100%;
+}
+#articleText ul li:first-child, #articleText ul li:last-child {
+    width: 28px;
+    height: 48px;
+}
+#articleText ul li:first-child a{
+    width: 100%;
+    height: 100%;
+    background: url('../img/arrow_L.png') no-repeat center;
+    background-size: contain;
+}
+#articleText ul li:last-child a{
+    width: 100%;
+    height: 100%;
+    background: url('../img/arrow_R.png') no-repeat center;
+    background-size: contain;
+}
+
+#articleText ul li .textBox{
+    width: 100%;
+    height: 230px;
+    background: #fff;
+    padding: 50px 0 45px;
+}
+#articleText ul li .textBox h4{
+    font-size: 1.125em;
+    text-align: center;
+    margin-bottom: 23px;
+}
+#articleText ul li .textBox p{
+    font-size: 0.875em;
+    white-space: pre-line;
+    text-align: center;
+}
+.subMenu{
+    width: 1720px;
+    height: 368px;
+    margin: 220px auto 120px;
+    position: relative;
+}
+.subMenu .sub{
+    width: 1084px;
+    height: 100%;
+    position: relative;
+
+}
+.subMenu .sub .subText{
+    width: 487px;
+    height: 197px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 98px);
+    background: #fff;
+    z-index: 10;
+}
+.subMenu .sub .subBack{
+    width: 966px;
+    height: 100%;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    background: url('../img/subback.jpg') no-repeat center;
+    background-size: cover;
+}
+.subMenu .classEvent{
+    width: 636px;
+    height: 368px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #eee;
+}
+footer{
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+footer nav{
+    width: 100%;
+    height: 56px;
+    background: #eee;
+}
+footer nav ul{
+    width: 680px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer nav ul li{}
+footer nav ul li a{
+}
+footer div{
+    width: 100%;
+}
+footer div ul{ }
+footer div ul li{}
+footer div ul li a{}
+footer div p{
+    white-space: pre-line;
+    color: #fff;
+}
+

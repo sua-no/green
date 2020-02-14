@@ -1,0 +1,34 @@
+*{margin: 0; padding: 0}
+
+.total_div {width: 994px; margin: 0 auto; }
+
+.header {}
+
+.left_all {float: left }
+.left_all .left1{width: 221}
+.left_all .left2{width: 221}
+.left_all .left3{width: 221}
+
+.c1 {overflow: hidden}
+.con_all {float: right; overflow: hidden}
+.con_all .contop{overflow: hidden}
+.con_all .con1 {width: 365px; float: left}
+.con_all .con2 {width: 408px; float: right}
+.con_all .con_left {width: 365px; float: left}
+.con_all .con_left1{}
+.con_all .con_left2{}
+.con_all .con_left3{}
+.con_all .con_right{width: 408px; float: right}
+.footer{overflow: hidden}
+.footer .footer1{width: 100px; float: left}
+.footer .footer2{width: 894px; float: right}
+
+
+
+
+
+
+
+
+
+

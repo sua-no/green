@@ -1,0 +1,204 @@
+@import url("common.css");
+header {
+}
+header article {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0 80px 0;
+    text-transform: uppercase;
+}
+header article h1 {
+    font-size: 2.4em;
+    color: #222;
+}
+header article nav {
+}
+header article nav a {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-left: 30px;
+}
+header article nav a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    display: block;
+    background: #333;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+header article nav a:hover:after {
+    width: 100%;
+}
+
+section {
+    width: 1140px;
+    margin: 0 auto;
+}
+section .spot {
+    position: relative;
+    width: 100%;
+}
+section .spot figure {
+    position: relative;
+    overflow: hidden;
+}
+section .spot figure img {
+    width: 100%;
+
+    opacity: 0;
+
+    animation: spot 1.2s forwards;
+}
+@keyframes spot {
+    20% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+section .spot figure figcaption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .spot figure figcaption span {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 5.4em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    height: 100px;
+    padding-top: 100px;
+    /* transition: padding 0.5s; */
+    /* animation: txt 0.5s.5s alternate-reverse infinite; */
+}
+section .spot figure figcaption span:nth-of-type(1) {
+    animation: txt 0.7s.5s forwards;
+}
+section .spot figure figcaption span:nth-of-type(2) {
+    animation: txt 0.7s.9s forwards;
+}
+@keyframes txt {
+    0% {
+        color: royalblue;
+    }
+    50% {
+        color: royalblue;
+    }
+    100% {
+        padding-top: 0;
+    }
+}
+/* section .spot figure:hover figcaption span {
+    padding-top: 0;
+}
+section .spot figure figcaption span:nth-of-type(2) {
+    transition-delay: 0.15s;
+} */
+section .spot p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.1em;
+    color: #000;
+    transform: rotate(-90deg) translateY(-150%);
+    transform-origin: 0% 0%; /*transform 기준점*/
+    padding-left: 53px;
+}
+section .spot p::after {
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: url(../img/arrow.png) no-repeat left center;
+    transform: rotate(90deg);
+}
+section .spot2 {
+    width: 100%;
+    margin: 98px auto;
+    position: relative;
+}
+section .spot2 ul {
+    position: relative;
+    height: 300px;
+}
+section .spot2 ul li {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+section .spot2 .left {
+    margin-top: 10px;
+}
+section .spot2 .left strong {
+    white-space: pre-line;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #000;
+    line-height: 70px;
+}
+section .spot2 .left p {
+    white-space: pre-line;
+    font-size: 15px;
+    color: #000;
+    line-height: 30px;
+    margin: 28px 0 10px;
+}
+section .spot2 .left a {
+    font-size: 20px;
+    text-decoration: underline;
+    color: #000;
+}
+
+section .spot2 .right {
+}
+
+section .spot2 .right img {
+}
+
+section .spot2 .num {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    color: #000;
+}
+section .spot2 .num code {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 81px;
+    background: #434343;
+}
+footer p {
+    color: #bcbcbc;
+    font-size: 15px;
+    text-align: center;
+    padding: 33px 0;
+}

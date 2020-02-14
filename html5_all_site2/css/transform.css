@@ -1,0 +1,63 @@
+@import url("common.css");
+html,
+body {
+    height: 100%;
+}
+.scale {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.scale h1 {
+    font-size: 2em;
+    color: #333;
+    padding-bottom: 50px;
+}
+.scale figure {
+    overflow: hidden;
+}
+.scale figure img {
+    transition: 0.5s;
+}
+.scale figure:hover img {
+    transform: scale(1.6) rotate(180deg);
+}
+
+.scale2 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.scale2 h1 {
+    font-size: 2em;
+    color: #333;
+    padding-bottom: 50px;
+}
+.scale2 figure {
+}
+.scale2 figure img {
+}
+@keyframes fade {
+    0% {
+        transform: translateX(90px);
+    }
+    25% {
+        transform: translateX(-90px) scale(0.7);
+    }
+    50% {
+        transform: translateX(-90px) scale(0.3);
+    }
+    75% {
+        transform: scale(1) rotateY(180deg);
+    }
+    100% {
+        transform: translateY(-90px);
+    }
+}
+.scale2 figure:hover img {
+    animation: fade 1.5s linear alternate infinite;
+}

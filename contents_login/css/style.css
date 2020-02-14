@@ -1,0 +1,71 @@
+@import url("common.css");
+.public {
+    width: 900px;
+    background: #fff;
+    margin: 100px auto;
+    padding: 60px;
+}
+.public h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+.public .p_all {
+    border: 10px solid #333;
+    padding: 60px;
+}
+.public .p_all h3 {
+    font-size: 1.6em;
+    text-align: center;
+    color: #333;
+    padding-bottom: 20px;
+}
+.public .p_all h3 small {
+    display: block;
+    line-height: 3;
+    color: #000;
+}
+
+.public .p_all ul {
+    width: 100%;
+}
+.public .p_all ul li {
+    padding: 15px;
+    border-bottom: 1px solid #666;
+}
+.public .p_all ul li:nth-of-type(1) {
+    border-top: 1px solid #666;
+}
+.public .p_all ul li input {
+    width: 100%;
+    border: none;
+}
+.ck {
+    text-align: end;
+}
+.ck input [type:checkbox] {
+    width: 5px;
+    height: 5px;
+}
+
+.p_all .log {
+    text-align: center;
+}
+.p_all .log input {
+    background: #ddd;
+    background: #aaa;
+    color: #fff;
+    width: 90px;
+    height: 35px;
+    padding: 10px 30px;
+    border: none;
+    margin-top: 20px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+.bottom a;

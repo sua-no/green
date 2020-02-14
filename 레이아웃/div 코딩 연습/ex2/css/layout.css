@@ -1,0 +1,28 @@
+*{margin: 0; padding: 0}
+
+.total_div{width: 1034px; border: 1px solid red; margin: 0 auto}
+
+.header{overflow: hidden}
+.header .top1{width: 241px; float: left}
+.header .top2{width: 793px; float: right}
+
+.nav{width: 241; float: left}
+
+.content{width: 793px; float: right}
+.content .contentmenu{}
+.content .con1{width: 162px; float: left}
+.content .con_right{width: 631px; float: right}
+.content .con2{}
+.content .con3{}
+.content .con4{}
+.content .con5{}
+
+.footer{clear: both}
+
+
+
+
+
+
+
+

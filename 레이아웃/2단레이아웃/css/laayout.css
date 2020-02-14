@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0}
+body{font-family: '돋움'; font-size: 14px; color: #333}
+a{color: #333; text-decoration: none}
+ul{list-style: none}
+
+/* 레이아웃 */
+.main_div{width: 1000px; border: 1px solid #ccc; margin: 0 auto}
+
+.header{border-bottom: 1px solid #ccc}
+.header h1{font-size: 30px; margin: 20px 0 20px 20px}
+
+.nav{width: 200px; float:left}
+.nav ul{font-size: 16px; line-height: 2em; margin: 20px 15px; font-weight: bold;}
+.nav a:hover{color: #666; display: block; background: #0f0}
+
+.content{width: 799px; float: right; border-left: 1px solid #ccc }
+.content img{float: left; margin: 20px 15px }
+.content p{line-height: 1.5em; text-align: justify; margin: 20px 15px 20px 0}
+.content .p2{clear: both; margin-bottom: 20px}
+.content .p3{margin-left: 15px}
+.content strong{font-size: 16px}
+.content span{color: orange}
+
+.footer{clear: both}
+.footer p{font-size: 12px; text-align: center; margin: 20px 0; border-top: 1px solid #ccc}
+
