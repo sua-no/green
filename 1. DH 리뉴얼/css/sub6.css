@@ -72,143 +72,98 @@ header .head ul li img {
     width: 100%;
     height: 100%;
 }
-.subTop {
+.searchNav {
     width: 100%;
-}
-.subTop .subTitle {
-    width: 100%;
-    height: 185px;
-    background: url("../img/member.jpg") no-repeat;
-    background-size: cover;
-}
-.subTop .subTitle h2 {
-    text-transform: uppercase;
-    font-family: "Baskerville BT";
-    font-size: 2.375em;
-    text-align: center;
-    line-height: 185px;
-    color: #fff;
-}
-.contents {
-    width: 100%;
-    height: 100%;
+    background: #fdd000;
+    height: 50px;
     margin-bottom: 120px;
 }
-.contents .siteNav {
+.searchNav ul {
+    width: 780px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.searchNav ul li {
+    height: 100%;
+}
+.searchNav ul li a {
+    font-weight: bold;
+    line-height: 50px;
+    padding: 0 8px;
+}
+.searchNav ul li:first-child a {
+    background: #fff;
+    position: relative;
+}
+.searchNav ul li:first-child a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fdd000;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: 0;
+}
+.searchNav ul li:hover a {
+    background: #fff;
+}
+.contentsPage{
     width: 1480px;
     margin: 0 auto;
-    padding: 35px 0;
-    text-align: left;
 }
-.contents .siteNav .home {
-    padding: 0 20px;
-    font-size: 0.875em;
-    font-weight: 600;
-    margin-right: 20px;
+.contentsPage .magazineName{
+    width: 100%;
+    height: 70px;
 }
-.contents .siteNav span {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background: url("../img/arrow.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-right: 20px;
+.contentsPage .magazineName img{
+    width: 143px;
+    height: 43px;
 }
-.contents .siteNav .subName {
-    padding: 0 20px;
-    font-size: 0.875em;
-    font-weight: 600;
-    position: relative;
+.contentsPage dl{
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 50px;
+    margin-bottom: 48px;
 }
-.contents .siteNav .subName:after {
-    display: block;
-    width: 8px;
-    height: 8px;
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 3px;
-    background: url("../img/triangle.png") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.contents .login {
-    background: #eee;
-    width: 650px;
-    height: 380px;
-    margin: 0 auto;
-    padding: 40px 0 20px;
-}
-.contents .login h3 {
+.contentsPage dl dt{
     font-size: 1.625em;
-    text-align: center;
-    margin-bottom: 40px;
-}
-input{
-    border: none;
-    background: transparent;
-}
-
-.contents .login .id,
-.pw {
-    width: 450px;
-    height: 40px;
-    border-bottom: 2px solid #fff;
-    margin: 0 auto;
-}
-.contents .login .id input {
-    width: 100%;
-    height: 100%;
-}
-.contents .login .pw input {
-    width: 100%;
-    height: 100%;
-}
-.contents .login .pw {
-    margin-bottom: 24px;
-}
-.contents .login .loginBox {
-    width: 353px;
-    height: 35px;
-    background: #fdd000;
-    text-align: center;
-    margin: 0 auto 20px;
-    transition: .5s;
-}
-.contents .login .loginBox:hover{
-    background: #999;
-}
-.contents .login .loginBox button {
     font-weight: bold;
-    font-size: 1.25em;
-    line-height: 35px;
-    border: none;
-    background: transparent;
+    text-align: left;
+    margin: 70px 0;
 }
-.contents .login .idSave {
-    text-align: center;
-    margin-bottom: 42px;
+.contentsPage dl dd{
+    width: 100%;
 }
-.contents .login .idSave input {
+.contentsPage dl dd img{
+    width: 740px;
+    height: 450px;
 }
-.contents .login .join {
+.contentsPage dl dd:nth-of-type(1){
+    margin-bottom: 100px;
+}
+.contentsPage dl dd p{
+    margin-bottom: 45px;
+    white-space: pre-line;
+
+}
+.contentsPage .listBtn{
+    width: 80px;
+    height: 30px;
     margin: 0 auto;
-    width: 225px;
-    display: flex;
-    justify-content: space-between;
-}
-.contents .login .join a {
-    color: #666;
+    padding: 10px 20px;
+    background: #fdd000;
     font-size: 0.875em;
-    position: relative;
-}
-.contents .login .join a:first-child::after {
-    content: "|";
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 140px;
+    line-height: 0.875em;
     display: block;
-    position: absolute;
-    right: -20px;
-    top: 0;
 }
 footer {
     width: 100%;
@@ -271,4 +226,18 @@ footer div p {
     white-space: pre-line;
     color: #fff;
     line-height: 2em;
+}
+.top {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    right: 28px;
+    bottom: 260px;
+}
+.top a {
+    width: 100%;
+    height: 100%;
+    background: url("../img/top.png") no-repeat;
+    background-size: cover;
+    background-position: center;
 }

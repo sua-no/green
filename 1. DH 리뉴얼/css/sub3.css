@@ -263,6 +263,10 @@ header .head ul li img {
     position: absolute;
     left: calc(50% - 80px);
     top: calc(50% - 27px);
+    opacity: 0.8;
+}
+.contents .subInfo ul li a:hover{
+    opacity: 1;
 }
 .contents .subInfo ul li a img {
     width: 36px;

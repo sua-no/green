@@ -191,86 +191,44 @@ header .head ul li img {
     background: #fdd000;
     padding: 22px;
 }
-.classes ul li .calendarTit {
-    height: 58px;
-    width: 240px;
-    margin: 0 auto;
-}
-.classes ul li .calendarTit p {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 4px;
-    font-weight: 600;
-}
+.classes ul li figure{
 
-.classes ul li .calendarTit .caledarTitArrow {
-    width: 233px;
-    height: 26px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.classes ul li .calendarTit .caledarTitArrow a {
-    width: 18px;
-    height: 18px;
-    background-position: 15px 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background: #fff;
-}
-.classes ul li .calendarTit .caledarTitArrow a:first-child {
-    background: url("../img/arrow-reverse.png");
-}
-.classes ul li .calendarTit .caledarTitArrow a:last-child {
-    background: url("../img/arrow.png");
-}
-.classes ul li .calendarWeek {
-    width: 416px;
-    height: 43px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #fff;
-    padding: 0 57px;
-    margin-bottom: 24px;
-}
-.classes ul li .calendarWeek span {
-    font-size: 20px;
-    font-family: "Baskerville BT";
-    line-height: 43px;
-}
-
-.classes ul li .calendarMon {
-    width: 416px;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background: #fff;
-    padding: 54px 26px;
-    padding: 24px 57px;
-}
-.classes ul li .calendarMon div {
     width: 100%;
-    height: 26px;
-    display: flex;
-    justify-content: space-between;
+    height: 100%;
 }
-.classes ul li .calendarMon div span {
-    font-family: "Baskerville BT";
-    font-size: 20px;
-    display: inline-block;
+.classes ul li figure figcaption{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.classes ul li .calendarMon div span a {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #eee;
-    background-position: left -5px top -3px;
+.classes ul li figure figcaption p{
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1.8em;
 }
+.classes ul li figure table{
+    width: 416px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.classes ul li figure table thead{
+    background: #fff;
+    text-align: center;
+}
+.classes ul li figure table thead tr{
+    width: 314px;
+   
+    height: 50px;
+    
+}
+.classes ul li figure table thead tr th{
+}
+.classes ul li figure table tbody{
+    background: #fff;
+    text-align: center;
+}
+.classes ul li figure table tbody tr{}
+.classes ul li figure table tbody tr td{}
 .classes ul li:before {
     display: block;
     width: 0;
