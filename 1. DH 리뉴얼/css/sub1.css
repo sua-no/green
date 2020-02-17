@@ -136,15 +136,20 @@ header .head ul li img {
     background-position: center;
 }
 .contents .siteNav .siteList {
+    background: #fff;
     width: 130px;
     height: 120px;
     border: 1px solid #333;
     position: absolute;
-    left: 140px;
-    top: 50px;
+    left: 153px;
+    top: 63px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    display: none;
+}
+.contents .siteNav:hover .siteList {
+    display: block;
 }
 .contents .siteNav .siteList a {
     font-size: 0.875em;
@@ -153,6 +158,9 @@ header .head ul li img {
     text-align: center;
     border-bottom: 1px solid #333;
     line-height: 30px;
+}
+.contents .siteNav .siteList a:hover {
+    font-weight: bold;
 }
 .contents .siteNav .siteList a:last-of-type {
     border: none;
