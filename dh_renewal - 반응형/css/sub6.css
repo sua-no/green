@@ -1,0 +1,243 @@
+@import url("common.css");
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+/* font-family: 'Noto Sans KR', sans-serif; */
+#wrap {
+    width: 1920px;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header .head {
+    width: 1720px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head .logo {
+    width: 165px;
+    height: 34px;
+}
+
+header .head .logo img {
+    width: 100%;
+    height: 100%;
+}
+header .head .search {
+    width: 450px;
+    height: 30px;
+    border: 2px solid #fdd000;
+    position: relative;
+}
+header .head .search input {
+    width: 400px;
+    border: none;
+    text-indent: 20px;
+}
+header .head .search a:nth-of-type(1) {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 35px;
+    top: calc(50% - 3px);
+    background: url("../img/triangle.png") no-repeat center;
+    background-size: 7px;
+}
+
+header .head .search a:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    background: #fdd000 url(../img/search.png) no-repeat center;
+    background-size: 13px;
+}
+header .head ul {
+    width: 200px;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head ul li {
+    width: 19px;
+    height: 19px;
+}
+header .head ul li img {
+    width: 100%;
+    height: 100%;
+}
+.searchNav {
+    width: 100%;
+    background: #fdd000;
+    height: 50px;
+    margin-bottom: 120px;
+}
+.searchNav ul {
+    width: 780px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.searchNav ul li {
+    height: 100%;
+}
+.searchNav ul li a {
+    font-weight: bold;
+    line-height: 50px;
+    padding: 0 8px;
+}
+.searchNav ul li:first-child a {
+    background: #fff;
+    position: relative;
+}
+.searchNav ul li:first-child a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fdd000;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: 0;
+}
+.searchNav ul li:hover a {
+    background: #fff;
+}
+.contentsPage{
+    width: 1480px;
+    margin: 0 auto;
+}
+.contentsPage .magazineName{
+    width: 100%;
+    height: 70px;
+}
+.contentsPage .magazineName img{
+    width: 143px;
+    height: 43px;
+}
+.contentsPage dl{
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 50px;
+    margin-bottom: 48px;
+}
+.contentsPage dl dt{
+    font-size: 1.625em;
+    font-weight: bold;
+    text-align: left;
+    margin: 70px 0;
+}
+.contentsPage dl dd{
+    width: 100%;
+}
+.contentsPage dl dd img{
+    width: 740px;
+    height: 450px;
+}
+.contentsPage dl dd:nth-of-type(1){
+    margin-bottom: 100px;
+}
+.contentsPage dl dd p{
+    margin-bottom: 45px;
+    white-space: pre-line;
+
+}
+.contentsPage .listBtn{
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: #fdd000;
+    font-size: 0.875em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 140px;
+    line-height: 0.875em;
+    display: block;
+}
+footer {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    background: #333;
+}
+footer nav {
+    width: 100%;
+    height: 56px;
+    background: #eee;
+}
+footer nav ul {
+    padding: 0;
+    width: 680px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer nav ul li {
+    height: 100%;
+    vertical-align: middle;
+    padding: 16px 0;
+    background: unset;
+}
+footer nav ul li a {
+    padding: 0 10px;
+    height: 100%;
+}
+footer nav ul li:hover {
+    background: #fdd000;
+}
+footer nav ul li:hover a {
+    font-weight: bold;
+}
+footer div {
+    padding: 0;
+    width: 100%;
+    padding: 34px 0;
+}
+footer div ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div ul li {
+}
+footer div ul li a {
+    color: #fff;
+}
+footer div p {
+    text-align: center;
+    white-space: pre-line;
+    color: #fff;
+    line-height: 2em;
+}
+.top {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    right: 28px;
+    bottom: 260px;
+}
+.top a {
+    width: 100%;
+    height: 100%;
+    background: url("../img/top.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}

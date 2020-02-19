@@ -1,19 +1,15 @@
 @import url("common.css");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
 /* font-family: 'Noto Sans KR', sans-serif; */
-body {
-    width: 100%;
-}
+
 #wrap {
-    width: 1920px;
-    position: relative;
 }
 header {
     width: 100%;
     height: 100px;
 }
 header .head {
-    width: 1720px;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -31,13 +27,13 @@ header .head .logo img {
     height: 100%;
 }
 header .head .search {
-    width: 450px;
+    width: 27%;
     height: 30px;
     border: 2px solid #fdd000;
     position: relative;
 }
 header .head .search input {
-    width: 400px;
+    width: 100%;
     border: none;
     text-indent: 20px;
 }
@@ -60,7 +56,7 @@ header .head .search a:nth-of-type(2) {
     background-size: 13px;
 }
 header .head ul {
-    width: 200px;
+    width: 11%;
     height: 31px;
     display: flex;
     flex-direction: row;
@@ -76,7 +72,7 @@ header .head ul li img {
     height: 100%;
 }
 #visual {
-    width: 1480px;
+    width: 80%;
     height: 550px;
     margin: 0 auto;
     overflow: hidden;
@@ -207,11 +203,11 @@ header .head ul li img {
 }
 
 .menu {
-    width: 1720px;
+    width: 80%;
     margin: 70px auto;
 }
 .menu ul {
-    width: 980px;
+    width: 56%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -248,7 +244,7 @@ header .head ul li img {
     margin: 250px auto 0;
 }
 .banner {
-    width: 1480px;
+    width: 77%;
     height: 550px;
     margin: 0 auto;
     position: relative;
@@ -334,7 +330,7 @@ header .head ul li img {
     background-position: 0 -30px;
 }
 #articleText {
-    width: 1720px;
+    width: 89%;
     margin: 0 auto;
 }
 #articleText h3 {
@@ -351,7 +347,7 @@ header .head ul li img {
     padding: 0;
 }
 #articleText ul li {
-    width: 460px;
+    width: 25%;
     height: 460px;
     display: flex;
     flex-direction: column;
@@ -688,4 +684,38 @@ footer div p {
     background: url("../img/top.png") no-repeat;
     background-size: cover;
     background-position: center;
+}
+@media (max-width: 960px) {
+    #wrap {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    header .head {
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    header ul {
+        width: 30%;
+    }
+    .visual {
+        width: 100%;
+    }
+    .visual ul {
+        width: 100%;
+        overflow: hidden;
+    }
+    .visual li {
+        width: 50%;
+    }
+    .menu {
+    }
+    .menu ul {
+    }
+    .menu ul li a {
+        font-size: 1em;
+    }
+    .contents1 .banner {
+    }
 }
