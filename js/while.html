@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>while 1~100까지 짝수의 합을 구하라</h1>");
+
+            var num = 1;
+            var sum = null;
+            while (num < 100) {
+                num++;
+                if (num % 2 == 0) {
+                    // sum = sum + num;
+                    sum += num;
+                }
+            }
+            document.write(sum + "<br>");
+            document.write("<h1>while 홀수의 개수</h1>");
+
+            var hole = 0;
+            var num = 0;
+            while (num < 100) {
+                if (num % 2 == 1) {
+                    hole += 1;
+                }
+                num++;
+            }
+            document.write(hole + "<br>");
+            document.write("<h1>while 3,6,9</h1>");
+
+            var num = 1;
+            while (num < 100) {
+                num++;
+                if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
+                    document.write(num + "/");
+                }
+            }
+
+            document.write("<h1>while 1~100까지 출력</h1>");
+
+            var num = 1;
+            while (num < 100) {
+                document.write(num + "/");
+                num++;
+            }
+
+            document.write("<h1>while 홀수 나열</h1>");
+
+            var num = 1;
+            while (num < 100) {
+                if (num % 2 == 1) {
+                    document.write(num + "/");
+                } else {
+                    document.write("*/");
+                }
+                num++;
+            }
+        </script>
+    </body>
+</html>

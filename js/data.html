@@ -8,12 +8,13 @@
     <body>
         <script>
             document.write("<h1>ex-if 조건문 활용</h1>");
-            var home = prompt("집에 가고 싶습니까?(네/아니오)");
-
-            if (home == "네") {
-                alert("가세요");
+            var a = prompt("좋아하는 숫자는?");
+            a = parseInt(a);
+            if (a % 2 == 0) {
+                document.write("짝수" + a);
+                
             } else {
-                alert("그래도 가세요");
+                document.write("홀수" + a);
             }
         </script>
     </body>
