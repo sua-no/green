@@ -228,6 +228,9 @@ header .head ul li img {
     text-align: center;
 }
 .classes ul li figure table tbody tr{}
+.classes ul li figure table tbody tr:first-of-type{
+    background: #fdd000;
+}
 .classes ul li figure table tbody tr td{}
 .classes ul li:before {
     display: block;
