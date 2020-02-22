@@ -1,0 +1,305 @@
+@import url("common.css");
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+/* font-family: 'Noto Sans KR', sans-serif; */
+#wrap {
+    width: 1920px;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header .head {
+    width: 1720px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head .logo {
+    width: 165px;
+    height: 34px;
+}
+
+header .head .logo img {
+    width: 100%;
+    height: 100%;
+}
+header .head .search {
+    width: 450px;
+    height: 30px;
+    border: 2px solid #fdd000;
+    position: relative;
+}
+header .head .search input {
+    width: 400px;
+    border: none;
+    text-indent: 20px;
+}
+header .head .search a:nth-of-type(1) {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 35px;
+    top: calc(50% - 3px);
+    background: url("../img/triangle.png") no-repeat center;
+    background-size: 7px;
+}
+
+header .head .search a:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    background: #fdd000 url(../img/search.png) no-repeat center;
+    background-size: 13px;
+}
+header .head ul {
+    width: 200px;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head ul li {
+    width: 19px;
+    height: 19px;
+}
+header .head ul li img {
+    width: 100%;
+    height: 100%;
+}
+.subTop {
+    width: 100%;
+}
+.subTop .subTitle {
+    width: 100%;
+    height: 185px;
+    background: url("../img/member.jpg") no-repeat;
+    background-size: cover;
+}
+.subTop .subTitle h2 {
+    text-transform: uppercase;
+    font-family: "Baskerville BT";
+    font-size: 2.375em;
+    text-align: center;
+    line-height: 185px;
+    color: #fff;
+}
+.contents {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 120px;
+}
+.contents .siteNav {
+    width: 1480px;
+    margin: 0 auto;
+    padding: 35px 0;
+    text-align: left;
+    position: relative;
+}
+.contents .siteNav .siteList {
+    background: #fff;
+    width: 130px;
+    height: 120px;
+    border: 1px solid #333;
+    position: absolute;
+    left: 153px;
+    top: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+.contents .siteNav:hover .siteList {
+    display: block;
+}
+.contents .siteNav .siteList a {
+    font-size: 0.875em;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    line-height: 30px;
+}
+.contents .siteNav .siteList a:hover {
+    font-weight: bold;
+}
+.contents .siteNav .siteList a:last-of-type {
+    border: none;
+}
+.contents .siteNav .home {
+    padding: 0 20px;
+    font-size: 0.875em;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.contents .siteNav span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../img/arrow.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+.contents .siteNav .subName {
+    padding: 0 20px;
+    font-size: 0.875em;
+    font-weight: 600;
+    position: relative;
+}
+.contents .siteNav .subName:after {
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    background: url("../img/triangle.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.contents .login {
+    background: #eee;
+    width: 650px;
+    height: 380px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+}
+.contents .login h3 {
+    font-size: 1.625em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+input {
+    border: none;
+    background: transparent;
+}
+
+.contents .login .id,
+.pw {
+    width: 450px;
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    margin: 0 auto;
+}
+.contents .login .id input {
+    width: 100%;
+    height: 100%;
+}
+.contents .login .pw input {
+    width: 100%;
+    height: 100%;
+}
+.contents .login .pw {
+    margin-bottom: 24px;
+}
+.contents .login .loginBox {
+    width: 353px;
+    height: 35px;
+    background: #fdd000;
+    text-align: center;
+    margin: 0 auto 20px;
+    transition: 0.5s;
+}
+.contents .login .loginBox:hover {
+    background: #999;
+}
+.contents .login .loginBox button {
+    font-weight: bold;
+    font-size: 1.25em;
+    line-height: 35px;
+    border: none;
+    background: transparent;
+}
+.contents .login .idSave {
+    text-align: center;
+    margin-bottom: 42px;
+}
+.contents .login .idSave input {
+}
+.contents .login .join {
+    margin: 0 auto;
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+}
+.contents .login .join a {
+    color: #666;
+    font-size: 0.875em;
+    position: relative;
+}
+.contents .login .join a:first-child::after {
+    content: "|";
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+footer {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    background: #333;
+}
+footer nav {
+    width: 100%;
+    height: 56px;
+    background: #eee;
+}
+footer nav ul {
+    padding: 0;
+    width: 680px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer nav ul li {
+    height: 100%;
+    vertical-align: middle;
+    padding: 16px 0;
+    background: unset;
+}
+footer nav ul li a {
+    padding: 0 10px;
+    height: 100%;
+}
+footer nav ul li:hover {
+    background: #fdd000;
+}
+footer nav ul li:hover a {
+    font-weight: bold;
+}
+footer div {
+    padding: 0;
+    width: 100%;
+    padding: 34px 0;
+}
+footer div ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div ul li {
+}
+footer div ul li a {
+    color: #fff;
+}
+footer div p {
+    text-align: center;
+    white-space: pre-line;
+    color: #fff;
+    line-height: 2em;
+}

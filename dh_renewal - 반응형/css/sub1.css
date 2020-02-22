@@ -1,0 +1,486 @@
+@import url("common.css");
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+/* font-family: 'Noto Sans KR', sans-serif; */
+#wrap {
+    width: 1920px;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+header .head {
+    width: 1720px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head .logo {
+    width: 165px;
+    height: 34px;
+}
+
+header .head .logo img {
+    width: 100%;
+    height: 100%;
+}
+header .head .search {
+    width: 450px;
+    height: 30px;
+    border: 2px solid #fdd000;
+    position: relative;
+}
+header .head .search input {
+    width: 400px;
+    border: none;
+    text-indent: 20px;
+}
+header .head .search a:nth-of-type(1) {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    right: 35px;
+    top: calc(50% - 3px);
+    background: url("../img/triangle.png") no-repeat center;
+    background-size: 7px;
+}
+
+header .head .search a:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    background: #fdd000 url(../img/search.png) no-repeat center;
+    background-size: 13px;
+}
+header .head ul {
+    width: 200px;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head ul li {
+    width: 19px;
+    height: 19px;
+}
+header .head ul li img {
+    width: 100%;
+    height: 100%;
+}
+.subTop {
+    width: 100%;
+}
+.subTop .subTitle {
+    width: 100%;
+    height: 185px;
+    background: url("../img/subtitle_class.jpg") no-repeat;
+    background-size: cover;
+}
+.subTop .subTitle h2 {
+    text-transform: uppercase;
+    font-family: "Baskerville BT";
+    font-size: 2.375em;
+    text-align: center;
+    line-height: 185px;
+    color: #fff;
+}
+.contents {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    margin-bottom: 120px;
+}
+.contents .siteNav {
+    width: 1480px;
+    margin: 0 auto;
+    padding: 35px 0;
+    text-align: left;
+    position: relative;
+}
+.contents .siteNav .home {
+    padding: 0 20px;
+    font-size: 0.875em;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.contents .siteNav span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url("../img/arrow.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+.contents .siteNav .subName {
+    padding: 0 20px;
+    font-size: 0.875em;
+    font-weight: 600;
+    position: relative;
+}
+.contents .siteNav .subName:after {
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    background: url("../img/triangle.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.contents .siteNav .siteList {
+    background: #fff;
+    width: 130px;
+    height: 120px;
+    border: 1px solid #333;
+    position: absolute;
+    left: 153px;
+    top: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+.contents .siteNav:hover .siteList {
+    display: block;
+}
+.contents .siteNav .siteList a {
+    font-size: 0.875em;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    line-height: 30px;
+}
+.contents .siteNav .siteList a:hover {
+    font-weight: bold;
+}
+.contents .siteNav .siteList a:last-of-type {
+    border: none;
+}
+.contents .subBanner {
+    width: 1480px;
+    height: 230px;
+    margin: 0 auto 110px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.contents .subBanner .bannerText {
+    width: 1012px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contents .subBanner .bannerText strong {
+    margin-bottom: 25px;
+    font-size: 1.625em;
+    text-align: center;
+}
+.contents .subBanner .bannerText i {
+    font-style: normal;
+    color: #999;
+    text-align: center;
+}
+.contents .subBanner .bannerImg {
+    width: 468px;
+    height: 100%;
+    background: url("../img/sub1banner.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.classes {
+    width: 1480px;
+    margin: 0 auto;
+    padding-bottom: 220px;
+}
+.classes ul {
+    padding: 0;
+    width: 100%;
+    height: 1028px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.classes ul li {
+    width: 460px;
+    height: 460px;
+    box-sizing: border-box;
+    position: relative;
+}
+.classes ul li:first-of-type {
+    background: #fdd000;
+    padding: 22px;
+}
+.classes ul li figure {
+    width: 100%;
+}
+.classes ul li figure figcaption {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.classes ul li figure figcaption p {
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1.8em;
+}
+.classes ul li figure .thead {
+    width: 416px;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.classes ul li figure .thead tr {
+    background: #fff;
+    text-align: center;
+    height: 50px;
+}
+.classes ul li figure .thead tr th {
+    width: 50px;
+}
+.classes ul li .tbody {
+    width: 416px;
+    background: #fff;
+    text-align: center;
+    border-collapse: collapse;
+}
+.classes ul li .tbody tr {
+    height: 50px;
+}
+.classes ul li .tbody tr a {
+    border-radius: 50%;
+    color: #333;
+    font-weight: bold;
+}
+.classes ul li .tbody tr td {
+    color: #666;
+}
+<<<<<<< HEAD:1. DH 리뉴얼/css/sub1.css
+.classes ul li figure table tbody tr{}
+.classes ul li figure table tbody tr:first-of-type{
+    background: #fdd000;
+}
+.classes ul li figure table tbody tr td{}
+.classes ul li:before {
+=======
+.classes ul .list:before {
+>>>>>>> ddfd8073b4d01b7506940b034ec410e7f1f46b0c:dh_renewal - 반응형/css/sub1.css
+    display: block;
+    width: 0;
+    height: 5px;
+    content: "";
+    background: #fdd000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    transition: linear 0.35s;
+}
+.classes ul .list:after {
+    display: block;
+    width: 5px;
+    height: 0;
+    content: "";
+    background: #fdd000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transition: 0.35s 0.35s linear;
+}
+.classes ul .list a {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+}
+.classes ul .list a:before {
+    display: block;
+    width: 0;
+    height: 5px;
+    content: "";
+    background: #fdd000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: 0.35s 0.7s linear;
+}
+.classes ul .list a:after {
+    display: block;
+    width: 5px;
+    height: 0;
+    content: "";
+    background: #fdd000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: 0.35s 1.05s linear;
+}
+.classes ul .list:hover:before {
+    width: 100%;
+}
+.classes ul .list:hover:after {
+    height: 100%;
+}
+.classes ul .list:hover a:before {
+    width: 100%;
+}
+.classes ul .list:hover a:after {
+    height: 100%;
+}
+.classes ul .list a .classImg {
+    width: 100%;
+    height: 50%;
+}
+.classes ul .list a .classText {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    padding: 74px 0 70px;
+}
+.classes ul .list a .classText:after {
+    display: block;
+    width: 89px;
+    height: 23px;
+    content: "";
+    position: absolute;
+    left: calc(50% - 45px);
+    top: 25px;
+    background: url("../img/logo_happy.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.classes ul .list a .classText h4 {
+    text-align: center;
+    color: #000;
+    font-size: 1.25em;
+    margin-bottom: 40px;
+}
+.classes ul .list a .classText p {
+    text-align: center;
+}
+.classes ul .list a .classText span {
+    position: absolute;
+    animation: ani 3s linear infinite;
+}
+@keyframes ani {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.classes ul li a .classText span:nth-of-type(1) {
+    width: 50px;
+    height: 24px;
+    background: #eb6100;
+    right: 90px;
+    bottom: 66px;
+}
+.classes ul li a .classText span:nth-of-type(2) {
+    width: 11px;
+    height: 11px;
+    background: #eb6100;
+    transform: rotate(45deg);
+    right: 133px;
+    bottom: 72px;
+}
+.classes ul li a .classText span:nth-of-type(3) {
+    color: #fff;
+    font-size: 0.75em;
+    right: 96px;
+    bottom: 71px;
+}
+footer {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    background: #333;
+}
+footer nav {
+    width: 100%;
+    height: 56px;
+    background: #eee;
+}
+footer nav ul {
+    padding: 0;
+    width: 680px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer nav ul li {
+    height: 100%;
+    vertical-align: middle;
+    padding: 16px 0;
+    background: unset;
+}
+footer nav ul li a {
+    padding: 0 10px;
+    height: 100%;
+}
+footer nav ul li:hover {
+    background: #fdd000;
+}
+footer nav ul li:hover a {
+    font-weight: bold;
+}
+footer div {
+    padding: 0;
+    width: 100%;
+    padding: 34px 0;
+}
+footer div ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div ul li {
+}
+footer div ul li a {
+    color: #fff;
+}
+footer div p {
+    text-align: center;
+    white-space: pre-line;
+    color: #fff;
+    line-height: 2em;
+}
+.top {
+    width: 37px;
+    height: 37px;
+    position: fixed;
+    right: 28px;
+    bottom: 260px;
+}
+.top a {
+    width: 100%;
+    height: 100%;
+    background: url("../img/top.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
