@@ -7,28 +7,80 @@
     </head>
     <body>
         <script>
-            document.write("<h1>array의 합</h1>");
-            var arr = [10, 20, 80, 40, 70];
-            var i = 0;
-            var sum = 0;
+            // document.write("<h1>array의 합</h1>");
+            // var arr = [10, 20, 80, 40, 70];
+            // var i = 0;
+            // var sum = 0;
 
-            while (++i < arr.length) {
-                sum += arr[i];
+            // while (++i < arr.length) {
+            //     sum += arr[i];
+            // }
+            // document.write(sum);
+            // document.write("<h1>for문</h1>");
+            // var arr = [10, 20, 80, 40, 70];
+            // var sum = 0;
+            // var avg = 0;
+
+            // for (var i = 0; i < arr.length; i++) {
+            //     sum += arr[i];
+            //     avg = sum / arr.length;
+            //     console.log(sum);
+            //     console.log(avg);
+            // }
+            // document.write("총점 : " + sum);
+            // document.write("평균 : " + avg);
+            document.write("<h1>문제1</h1>");
+            var i = 0;
+            while (i < 10) {
+                i++;
+                document.write(i + "/");
+            }
+            document.write("<h1>문제2</h1>");
+            var sum = 0;
+            for (var i = 0; i <= 100; i++) {
+                sum += i;
             }
             document.write(sum);
-            document.write("<h1>for문</h1>");
-            var arr = [10, 20, 80, 40, 70];
+            document.write("<h1>문제3</h1>");
+            var ary = [10, 50, 60, 80, 70, 60];
             var sum = 0;
-            var avg = 0;
-
-            for (var i = 0; i < arr.length; i++) {
-                sum += arr[i];
-                avg = sum / arr.length;
-                console.log(sum);
-                console.log(avg);
+            var hole = 0;
+            var bole = 0;
+            for (var i = 0; i < ary.length; i++) {
+                sum += ary[i];
             }
-            document.write("총점 : " + sum);
-            document.write("평균 : " + avg);
+            document.write("배열값의 합 : " + sum);
+            for (var i = 0; i < ary.length; i++) {
+                if (60 < ary[i]) {
+                    hole += 1;
+                }
+                if (70 > ary[i]) {
+                    bole += 1;
+                }
+            }
+            document.write("<br>60보다 큰 수의 갯수 : " + hole);
+            document.write("<br>70보다 작은 수의 갯수 : " + bole);
+
+            document.write("<h1>문제4</h1>");
+            var ary = ["a", "b", "c", "d"];
+            document.write("배열의 길이 : " + ary.length);
+
+            for (var i = 0; i < ary.length; i++) {
+                if ("c" == ary[i]) {
+                    document.write("<br>" + ary[i]);
+                }
+            }
+            document.write("<h1>*출력</h1>");
+            var num = prompt("숫자?");
+
+            for (var i = 0; i <= num; i++) {
+                console.log("i = " + i);
+                for (var j = 0; j < i; j++) {
+                    console.log("j = " + j);
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
         </script>
     </body>
 </html>
