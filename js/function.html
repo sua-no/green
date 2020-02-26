@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="button" value="x+y" onclick="fun(2,10)" />
+        <p id="result">결과값</p>
+        <script>
+            document.write("<h1>함수</h1>");
+            function fun(x, y) {
+                var result = document.getElementById("result");
+                result.textContent = x + y;
+            }
+
+            function fun2(x) {
+                var i = 0;
+                while (++i <= x) {
+                    document.write("hello");
+                }
+            }
+
+            function fun3() {
+                var sum = 0;
+                console.log(arguments);
+                for (var i in arguments) {
+                    sum += arguments[i];
+                }
+                document.write("<br>" + sum);
+            }
+            fun3(70, 80, 90, 60, 70, 20, 30, 70);
+            function fun4() {
+                // var sum = 0;
+                console.log(arguments);
+                // for (var i in arguments) {
+                //     sum += arguments[i];
+                // }
+                // document.write("<br>" + sum);
+            }
+            var arr = [70, 80, 90, 60, 70, 20, 30, 70];
+            fun4(arr);
+        </script>
+    </body>
+</html>
