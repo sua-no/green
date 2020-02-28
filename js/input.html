@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            
+            .caculation input{
+                width: 50px;
+                height: 50px;
+            }
+            #result3{
+                width: 150px;
+                height: 30px;
+                margin-bottom: 10px;
+            }
+            .caculation p:last-child input {
+                vertical-align: top;
+            }
+            input#content{
+                width: 150px;
+                height: 30px;
+                margin-bottom: 10px;
+            }
+            input#check{
+                height: 30px;
+                margin-left: 10px;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>function prompt</h1>
+        <input type="button" value="더하기" onclick="add()">
+        <p id="result1">더하기 결과값</p>
+        <hr>
+        <h1>function 입력값 연산</h1>
+        <input type="text" id="num3">+
+        <input type="text" id="num4">
+        <input type="button" value="계산하기" onclick="add2()">
+        <p id="result2">더하기 결과값</p>
+        <hr>
+        <h1>계산기</h1>
+        <div  class="caculation">
+            <div>
+                <input type="text" value="0" id="result3" dir="ltl" readonly>
+            </div>
+            <input type="button" value="clear" id="clear">
+            <input type="button" value="=" id="equal">
+            <div class="calc">
+                <p>
+                    <input type="button" value="+">
+                    <input type="button" value="-">
+                    <input type="button" value="*">
+                    <input type="button" value="/">
+                </p>
+                <p>
+                    <input type="button" value="1">
+                    <input type="button" value="2">
+                    <input type="button" value="3">
+                </p>
+                <p><input type="button" value="4">
+                    <input type="button" value="5">
+                    <input type="button" value="6">
+                </p>
+                <p><input type="button" value="7">
+                    <input type="button" value="8">
+                    <input type="button" value="9">
+                </p>
+                <p><input type="button" value="">
+                    <input type="button" value="0">
+                    <input type="button" value="">
+                </p>
+            </div>
+            <hr>
+            <h1>출석체크</h1>
+            <div><input type="text" id="content" value="" placeholder="이름"><input type="button" value="출첵" id="check"></div>
+            <div>
+                <table>
+                    <tr>
+                        <th>num</th>
+                        <th>name</th>
+                    </tr>
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>노수아</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+    </div>
+        <script>
+            function add(){
+                var num1 = prompt("첫번째 숫자");
+                var num2 = prompt("두번째 숫자");
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+                var result = document.getElementById("result1");
+                result1.textContent = num1 + num2;
+            }
+            function add2(){
+                var sum = 0;
+                var num3 = document.getElementById("num3");
+                var num4 = document.getElementById("num4");
+                num3 = parseInt(num3.value);
+                num4 = parseInt(num4.value);
+                var result2 = document.getElementById("result2");
+                var sum = num3 + num4;
+                if(isNaN(sum) == true){
+                    alert("숫자를 입력하세요");
+                }else{
+                    result2.textContent = sum;
+                }
+            }
+            var result3 = document.getElementById("result3");
+            var calc = document.querySelectorAll(".calc input");
+            var clear = document.getElementById("clear");
+            var equal = document.getElementById("equal");
+            for(var i = 0; i < calc.length; i++){
+                calc[i].addEventListener("click", function(){
+                    if(result3.value == 0){
+                        result3.value ="";
+                    }
+                    result3.value += this.value;
+                })
+            }
+            clear.addEventListener("click",function(){
+                result3.value = "0"
+            })
+            equal.addEventListener("click",function(){
+                var total = eval(result3.value);
+                result3.value = total;
+            })
+
+            var content = document.getElementById("content");
+            var check = document.getElementById("check");
+            var tbody = document.querySelector("tbody");
+            var tr = tbody.querySelectorAll("tr").length;
+            console.log(tr);
+
+            function enter(){
+                if(content.value == ""){
+                    alert("이름을 입력하세요");
+                }else{
+                    
+                    tbody.innerHTML += "<tr><td>" + tr + "</td>" + "<td>" + content.value + "</td></tr>";
+                    tr++;
+                }
+                content.value = "";
+            }
+            check.addEventListener("click",enter);
+            content.addEventListener("keydown", function(e) {
+                if (e.keyCode == 13) {
+                    enter();
+                }
+            });
+        </script>
+    </body>
+</html>
