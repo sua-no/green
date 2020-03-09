@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 랜덤함수
+            //ceil : 올림 / round : 반올림 / floor : 내림
+            var arr = [];
+            var i = 0;
+            while (++i <= 45) {
+                var num = Math.floor(Math.random() * 45);
+                check(num);
+            }
+            function check(n) {
+                var bln = true;
+                for (var j in arr) {
+                    if (arr[j] === n) {
+                        bln = false;
+                        i--;
+                        break;
+                    }
+                }
+                if (bln == true) {
+                    arr.push(n);
+                }
+            }
+
+            console.log(arr);
+        </script>
+    </body>
+</html>
