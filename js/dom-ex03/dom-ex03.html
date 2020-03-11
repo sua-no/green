@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>BRACKETS 으로 시작하기</title>
+        <meta name="description" content="Brackets에 대한 대화식 시작 안내서입니다." />
+        <script src="dom-ex03.js"></script>
+        <style>
+            * {
+                font-size: 20px;
+            }
+            article {
+                border: 3px solid #000;
+                width: 800px;
+                margin: 100px auto;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <article id="ex1">
+            <h1>Ex1- 필드값을 받아 계산 및 삭제하기</h1>
+            <div class="box">
+                <input class="txt-input" type="text" size="8" name="kor" placeholder="이름" />
+                <input class="txt-input" type="text" size="8" name="kor" placeholder="점수1" />
+                <input class="txt-input" type="text" size="8" name="kor" placeholder="점수2" />
+                <input class="add-button" type="button" value="추가하기" />
+                <input class="result-button" type="button" value="결과보기" />
+                <input class="del-button" type="button" value="취소하기" />
+            </div>
+            <ul class="menu-list">
+                <li>이름</li>
+                <li>점수1</li>
+                <li>점수2</li>
+                <li>총점</li>
+                <li>평균</li>
+            </ul>
+        </article>
+
+        <article class="ex2">
+            <style>
+                .red {
+                    color: #f00;
+                }
+            </style>
+            <h1>Ex2 - Node에 클래스 넣기(className)</h1>
+            <div class="class-list">
+                class-list - > red 클래스로 바꿔주세요.
+            </div>
+        </article>
+
+        <article class="ex3">
+            <style>
+                .class-list {
+                    border: 1px solid #000;
+                    transition: 0.5s;
+                }
+                .active {
+                    color: #f00;
+                    height: 200px;
+                    width: 400px;
+                }
+            </style>
+
+            <h1>Ex3 - Node에 클래스 추가하기(classList.add)</h1>
+            <div class="class-list">
+                class-list -> active 클래스를 추가하세요.
+            </div>
+        </article>
+
+        <article class="ex4">
+            <style>
+                .toggle {
+                    display: none;
+                }
+                .on {
+                    display: block;
+                }
+            </style>
+            <h1>Ex4 - Node에 토글 클래스 만들기(classList.toggle)</h1>
+            <div class="toggle on">
+                class-list -> on 클래스로 토글하기.
+            </div>
+        </article>
+
+        <article class="ex5">
+            <style>
+                .faq {
+                    margin: 0;
+                }
+                .faq li {
+                    background: #ddd;
+                    margin: 5px 0;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                .faq li div {
+                    background: #fff;
+                    padding: 15px;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    display: none;
+                    transition: 0.5s;
+                }
+                .faq li div.on {
+                    display: block;
+                }
+            </style>
+            <h1>Ex5 - 클래스를 이용한 FAQ(classList.toggle)</h1>
+            <ol class="faq">
+                <li>
+                    복학생은 신청기간이 별도인가요?
+                    <div>
+                        복학생은 학적팀에 복학신청 후 재학상태이면 학기내 언제든지 추가자 신청이 가능합니다. 단, 건강검진제출이 완료되어있어야합니다.
+                    </div>
+                </li>
+                <li>
+                    생활관비는 어떻게 납부합니까?
+                    <div>
+                        신청기간에 kds.kaist.ac.kr에 접속하여 신청절차를 행하면 개인에게 가상계좌가 부여됩니다.
+                    </div>
+                </li>
+                <li>
+                    복학생은 신청기간이 별도인가요?
+                    <div>
+                        복학생은 학적팀에 복학신청 후 재학상태이면 학기내 언제든지 추가자 신청이 가능합니다. 단, 건강검진제출이 완료되어있어야합니다.
+                    </div>
+                </li>
+            </ol>
+        </article>
+    </body>
+</html>
