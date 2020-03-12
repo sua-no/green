@@ -16,26 +16,31 @@
                 margin: 100px auto;
                 padding: 100px;
             }
+            td {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <article id="ex1">
             <h1>Ex1- 필드값을 받아 계산 및 삭제하기</h1>
             <div class="box">
-                <input class="txt-input" type="text" size="8" name="kor" placeholder="이름" />
+                <input class="txt-input" type="text" size="8" name="name" placeholder="이름" />
                 <input class="txt-input" type="text" size="8" name="kor" placeholder="점수1" />
-                <input class="txt-input" type="text" size="8" name="kor" placeholder="점수2" />
+                <input class="txt-input" type="text" size="8" name="eng" placeholder="점수2" />
                 <input class="add-button" type="button" value="추가하기" />
                 <input class="result-button" type="button" value="결과보기" />
                 <input class="del-button" type="button" value="취소하기" />
             </div>
-            <ul class="menu-list">
-                <li>이름</li>
-                <li>점수1</li>
-                <li>점수2</li>
-                <li>총점</li>
-                <li>평균</li>
-            </ul>
+            <table width="350px" class="menu-list">
+                <tr>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>총점</th>
+                    <th>평균</th>
+                </tr>
+            </table>
         </article>
 
         <article class="ex2">

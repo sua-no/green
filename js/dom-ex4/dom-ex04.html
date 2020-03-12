@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="dom-ex04.css" rel="stylesheet" />
+        <script src="dom-ex04.js"></script>
+        <style>
+            * {
+                font-size: 26px;
+            }
+            article {
+                border: 3px solid #000;
+                width: 800px;
+                margin: 200px auto;
+                padding: 100px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <article id="ex1">
+            <h1>Ex1- Class활용한 버거메뉴 구현</h1>
+            menu-triger, nav에 active-1 클래스를 넣어 주세요.
+            <a class="menu-trigger ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav">
+                <a href="#">Navigation-01</a>
+                <a href="#">Navigation-02</a>
+                <a href="#">Navigation-03</a>
+                <a href="#">Navigation-04</a>
+                <a href="#">Navigation-05</a>
+            </div>
+        </article>
+
+        <article id="ex2">
+            <h1>Ex2- Class활용한 Tab 구현</h1>
+            - Tab클릭해서 클릭한 li에 active 클래스를 넣어주세요.<br />
+            - 클래스 tab-con에도 active 클래스를 넣어주세요.
+            <ul class="tab">
+                <li class="active" data-id="0">TAB-01</li>
+                <li data-id="1">TAB-02</li>
+                <li data-id="2">TAB-03</li>
+            </ul>
+            <div class="box">
+                <div class="tab-con active">contents-01</div>
+                <div class="tab-con">contents-02</div>
+                <div class="tab-con">contents-03</div>
+            </div>
+        </article>
+
+        <article id="ex3">
+            <h1>Ex3- Class활용한 이미지 리스트</h1>
+            <div class="img-list">
+                <div class="detail">
+                    <img src="img/img_01.jpg" />
+                </div>
+                <div class="thum">
+                    <img src="img/img_01.jpg" class="active" />
+                    <img src="img/img_02.jpg" />
+                    <img src="img/img_03.jpg" />
+                </div>
+            </div>
+        </article>
+    </body>
+</html>

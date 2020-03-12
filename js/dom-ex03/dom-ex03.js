@@ -5,29 +5,38 @@ window.addEventListener("DOMContentLoaded", function() {
     let addBtn = ex1.querySelector(".add-button");
     let resultBtn = ex1.querySelector(".result-button");
     let delBtn = ex1.querySelector(".del-button");
-    let menuList = ex1.querySelectorAll(".menu-list li");
+    let menuList = ex1.querySelector(".menu-list");
     let name = [];
     let kor = [];
     let eng = [];
-    let obj = { name, kor, eng };
     let sum = [];
+    let avg = [];
     addBtn.addEventListener("click", function() {
         name.push(txtInput[0].value);
         kor.push(txtInput[1].value);
         eng.push(txtInput[2].value);
         sum.push(parseInt(txtInput[1].value) + parseInt(txtInput[2].value));
-        for (var i = 0; i < name.length; i++) {
-            menuList[0].textContent += " " + name[i];
-            menuList[1].textContent += " " + kor[i];
-            menuList[2].textContent += " " + eng[i];
-        }
+        avg.push((parseInt(txtInput[1].value) + parseInt(txtInput[2].value)) / 2);
+        addTag();
     });
+    function addTag() {
+        var trAdd = document.createElement("tr");
+        menuList.appendChild(trAdd);
+        var tdAdd = document.createElement("td");
+        tdAdd.innerHTML = name[0];
+        trAdd.appendChild(tdAdd);
+        // for (var i = 0; i <= name.length; i++) {
+        //     td[0].textContent = name[0];
+        //     td[1].textContent = kor[0];
+        //     td[2].textContent = eng[0];
+        // }
+    }
     resultBtn.addEventListener("click", function() {
-        for (var i = 0; i < name.length; i++) {
-            menuList[3].textContent += " " + sum[i];
-            menuList[4].textContent += " " + sum[i] / 2;
-        }
+        resultInput();
     });
+    function resultInput() {
+        for (var i = 0; i < name.length; i++) {}
+    }
     delBtn.addEventListener("click", function() {
         txtInput[0].value = null;
         txtInput[1].value = null;
