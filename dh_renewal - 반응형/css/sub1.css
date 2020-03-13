@@ -266,16 +266,7 @@ header .head ul li img {
 .classes ul li .tbody tr td {
     color: #666;
 }
-<<<<<<< HEAD:1. DH 리뉴얼/css/sub1.css
-.classes ul li figure table tbody tr{}
-.classes ul li figure table tbody tr:first-of-type{
-    background: #fdd000;
-}
-.classes ul li figure table tbody tr td{}
-.classes ul li:before {
-=======
 .classes ul .list:before {
->>>>>>> ddfd8073b4d01b7506940b034ec410e7f1f46b0c:dh_renewal - 반응형/css/sub1.css
     display: block;
     width: 0;
     height: 5px;

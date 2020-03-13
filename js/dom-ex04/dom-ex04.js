@@ -32,10 +32,27 @@ window.addEventListener("DOMContentLoaded", function() {
     //     tabCon[data].className = "active";
     // });
     var tabLi = ex2.querySelectorAll(".tab li");
+    let j = 0;
     for (let i = 0; i < tabCon.length; i++) {
         tabLi[i].addEventListener("click", function() {
-            this.className = "active";
-            tabCon[i].className = "active";
+            tabLi[j].classList.remove("active");
+            tabCon[j].classList.remove("active");
+            this.classList.add("active");
+            tabCon[i].classList.add("active");
+            j = i;
         });
     }
+});
+//ex3
+window.addEventListener("DOMContentLoaded", function() {
+    var ex3 = document.querySelector("#ex3"),
+        detailImg = ex3.querySelector(".detail img"),
+        thum = ex3.querySelector(".thum");
+    thum.addEventListener("click", function(e) {
+        for (var i = 0; i < thum.children.length; i++) {
+            thum.children[i].classList.remove("active");
+        }
+        detailImg.src = e.target.src;
+        e.target.classList.add("active");
+    });
 });
