@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="elm"></div>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .elm {
+                width: 100px;
+                height: 100px;
+                background: #000;
+                position: absolute;
+                left: 0;
+            }
+        </style>
+        <script>
+            let idx = 0;
+            let elm = document.querySelector(".elm");
+            console.log(elm);
+            console.log("scrollWidth : " + elm.scrollWidth);
+            console.log("offsetWidth : " + elm.offsetWidth);
+
+            let elmWid = Math.max(elm.offsetWidth, elm.scrollWidth);
+
+            // widndow.innerWIdth
+            let inter = setInterval(function() {
+                idx++;
+                elm.style.left = idx + "px";
+                elm.style.top = idx + "px";
+
+                if (idx > window.innerHeight - elmWid) {
+                    clearInterval(inter);
+                }
+            }, 10);
+        </script>
+    </body>
+</html>

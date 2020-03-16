@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <style>
+            * {
+                margin: 0;
+            }
+            nav {
+                background: #000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+            nav a {
+                color: #fff;
+                cursor: pointer;
+            }
+            div {
+                height: 100vh;
+                line-height: 100vh;
+                text-align: center;
+            }
+            div:nth-of-type(2) {
+                background: rgb(93, 240, 208);
+            }
+        </style>
+        <nav>
+            <a data-id="0">navi01</a>
+            <a data-id="1">navi02</a>
+            <a data-id="2">navi03</a>
+        </nav>
+        <div class="con1">con1</div>
+        <div class="con2">con2</div>
+        <div class="con3">con3</div>
+
+        <script>
+            const nav = document.querySelector("nav");
+            const con0 = document.querySelector(".con1");
+            const con1 = document.querySelector(".con2");
+            const con2 = document.querySelector(".con3");
+
+            let idx = 0;
+            let lastId = 0;
+
+            nav.addEventListener("click", function(e) {
+                e.preventDefault();
+                let id = e.target.dataset.id;
+
+                // if (id == "1") {
+                //     window.scrollTo(0, con2.offsetTop);
+                // } else if (id == "0") {
+                //     window.scrollTo(0, con1.offsetTop);
+                // }
+                let con = eval("con" + id); //eval : 변수형태로 만듦  ex) eval('[]'); - 배열
+
+                // window.scrollTo(0, con.offsetTop);
+                // let inter = setInterval(function() {
+                //     if (id > lastId) {
+                //         if (con.offsetTop >= window.scrollY) {
+                //             idx += 10;
+                //         } else {
+                //             clearInterval(inter);
+                //             lastId = parseInt(id);
+                //         }
+                //     } else {
+                //         if (con.offsetTop <= window.scrollY) {
+                //             idx -= 10;
+                //         } else {
+                //             clearInterval(inter);
+                //             lastId = parseInt(id);
+                //         }
+                //     }
+
+                //     window.scrollTo(0, idx);
+                // }, 0);
+
+                let down = setInterval(function() {
+                    if (con.offsetTop > window.scrollY) {
+                        idx += 5;
+                    } else {
+                        clearInterval(down);
+                    }
+                    window.scrollTo(0, idx);
+                }, 0);
+
+                let up = setInterval(function() {
+                    if (con.offsetTop < window.scrollY) {
+                        idx -= 10;
+                    } else {
+                        clearInterval(up);
+                    }
+                    window.scrollTo(0, idx);
+                }, 0);
+            });
+        </script>
+    </body>
+</html>
