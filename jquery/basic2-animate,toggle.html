@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+                // $(document).ready(function() {});
+                $(".box").css({
+                    width: 100,
+                    height: 100,
+                    background: "red"
+                });
+                var count = 0;
+                $(".basic button").on("click", function() {
+                    //$("   ").eq()
+                    //eq() : 몇번째
+                    var $this = $(this).index();
+                    if ($this == 0) {
+                        count += 50;
+                    } else {
+                        count -= 50;
+                    }
+                    $(".box").animate(
+                        {
+                            marginLeft: count
+                        },
+                        700
+                    );
+                });
+                $(".btn button").on("click", function() {
+                    var leftCalc = 0;
+                    var txt = "닫기";
+                    var aa = $(".btn button").text();
+                    // if (aa == "닫기") {
+                    //     leftCalc = -600;
+                    //     txt = "메뉴";
+                    // }
+                    $(".btn").toggleClass("active");
+                    // if ($(this).hasClass("active")) {
+                    //     leftCalc = -600;
+                    //     txt = "메뉴";
+                    // }
+                    // $(".nav").animate(
+                    //     {
+                    //         left: leftCalc
+                    //     },
+                    //     700,
+
+                    //     function() {
+                    //         //콜백 함수. 애니메이션 동작이 끝난 후 동작할 함수
+                    //         $(".btn button").text(txt);
+                    //     }
+                    // );
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="basic">
+            <button>우측</button>
+            <button>좌측</button>
+            <div class="box">콘텐츠</div>
+        </div>
+        <div class="btn">
+            <button>메뉴</button>
+            <div class="nav">네비게이션</div>
+            <style>
+                .btn {
+                    margin: 100px;
+                    position: relative;
+                }
+                .btn.active .nav {
+                    left: 0;
+                }
+                .nav {
+                    background: #ddd;
+                    padding: 100px;
+                    display: inline-block;
+                    position: absolute;
+                    left: -600px;
+                    top: 50px;
+                    transition: 0.5s;
+                }
+            </style>
+        </div>
+    </body>
+</html>
