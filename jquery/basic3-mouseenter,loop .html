@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-            $(function() {
-                $(".fade img")
-                    .not(":first")
-                    .hide();
-                var idx = 0;
-                var inter;
-                function loop() {
-                    inter = setInterval(function() {
-                        $(".fade img")
-                            .eq(idx)
-                            .fadeOut(1000);
-                        if (idx == 2) {
-                            idx = 0;
-                        } else {
-                            idx++;
-                        }
-                        $(".fade img")
-                            .eq(idx)
-                            .fadeIn(1000);
-                    }, 2000);
-                }
-                loop();
-                $(".fade").on("mouseenter", function() {
-                    //mouseover : 마우스 움직일때 마다 실행 ,mouseenter : 마우스 올렸을 때 한번 실행
-                    clearInterval(inter);
-                });
-                $(".fade").on("mouseleave", function() {
-                    //mouseout : 마우스 움직일때 마다 실행 ,mouseleave : 마우스 떠났을 때 한번 실행
-                    loop();
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <div class="fade">
-            <img src="../js/img/img_01.jpg" alt="" />
-            <img src="../js/img/img_02.jpg" alt="" />
-            <img src="../js/img/img_03.jpg" alt="" />
-        </div>
-        <style>
-            img {
-                width: 600px;
-                height: 400px;
-                position: absolute;
-                left: 0;
-                top: 0;
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".fade img").not(":first").hide();
+            var idx = 0;
+            var inter;
+
+            function loop() {
+                inter = setInterval(function () {
+                    $(".fade img").eq(idx).fadeOut(1000);
+                    if (idx == 2) {
+                        idx = 0;
+                    } else {
+                        idx++;
+                    }
+                    $(".fade img").eq(idx).fadeIn(1000);
+                }, 2000);
             }
-        </style>
-    </body>
+            loop();
+            $(".fade").on("mouseenter", function () {
+                //mouseover : 마우스 움직일때 마다 실행 ,mouseenter : 마우스 올렸을 때 한번 실행
+                clearInterval(inter);
+            });
+            $(".fade").on("mouseleave", function () {
+                //mouseout : 마우스 움직일때 마다 실행 ,mouseleave : 마우스 떠났을 때 한번 실행
+                loop();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="fade">
+        <img src="../js/img/img_01.jpg" alt="" />
+        <img src="../js/img/img_02.jpg" alt="" />
+        <img src="../js/img/img_03.jpg" alt="" />
+    </div>
+    <style>
+        img {
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</body>
+
 </html>
