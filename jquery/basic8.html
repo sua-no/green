@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var sTop = 0;
+            $(window).on("scroll", function () {
+                sTop = $(this).scrollTop();
+                $("aside").css({
+                    top: sTop + 100
+                });
+                console.log(sTop);
+                var dom = $(document).height() - $(window).height(); //스크롤이 최하단에 도착했을때 스크롤의 높이
+                console.log(dom == sTop);
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <aside>top</aside>
+    <style>
+        div {
+            height: 2000px;
+        }
+
+        aside {
+            position: absolute;
+            right: 0;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            transition: .2s;
+        }
+    </style>
+</body>
+
+</html>

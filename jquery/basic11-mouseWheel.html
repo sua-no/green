@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var move = 0;
+            var num = 0;
+            $("section div").on("mousewheel", function (e) {
+                var delta = e.originalEvent.wheelDelta;
+                //vanila : e.wheelDelta;
+
+                if (delta < 0) { //휠 내렸을 때 -값
+                    if (num < 5) {
+                        move = $(this).next().offset().top;
+                        scroll();
+                    }
+
+                } else { //휠 올렸을 때 +값
+                    if (num > 0) {
+                        move = $(this).prev().offset().top;
+                        scroll();
+                    }
+                }
+
+                function scroll() {
+                    $("html").stop().animate({
+                        scrollTop: move
+                    }, function () {
+                        if (delta < 0) {
+                            num++;
+
+                        } else {
+                            num--;
+                        }
+                        console.log(num);
+                    });
+                }
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <section>
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+    </section>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div {
+            width: 100%;
+            height: 100vh;
+            background: #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+        }
+
+        div:nth-child(even) {
+            background: #eee;
+        }
+    </style>
+</body>
+
+</html>

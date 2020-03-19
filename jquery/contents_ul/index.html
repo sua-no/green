@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link href="css/index-common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var idx = 0;
+            imgBtn();
+            $(".con_s1 ul li").on("click", function () {
+                var liImg = $(this).find("img").attr("src");
+                var liSpan = $(this).find("span").text();
+                idx = $(this).index();
+                $(".pop img").attr("src", liImg);
+                $(".pop span").text(liSpan);
+                btnHide();
+            });
+
+            $(".pop div a").eq(1).on("click", function (e) {
+                e.preventDefault();
+                ++idx;
+                imgBtn();
+            });
+
+            $(".pop div a").eq(0).on("click", function (e) {
+                e.preventDefault();
+                --idx;
+                imgBtn();
+
+            });
+
+            function imgBtn() {
+                btnHide();
+                liImg = $(".con_s1 ul li").eq(idx).find("img").attr("src");
+                liSpan = $(".con_s1 ul li").eq(idx).find("span").text();
+
+                $(".pop img").attr("src", liImg);
+                $(".pop span").text(liSpan);
+            };
+
+            function btnHide() {
+                if (idx == $(".con_s1 ul li").length - 1) {
+                    $(".pop div a").eq(0).show();
+                    $(".pop div a").eq(1).hide();
+                } else if (idx == 0) {
+                    $(".pop div a").eq(1).show();
+                    $(".pop div a").eq(0).hide();
+                } else {
+                    $(".pop div a").eq(0).show();
+                    $(".pop div a").eq(1).show();
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pop"><img src="" alt=""><span></span>
+        <div>
+            <a href="">prev</a><a href="">next</a>
+        </div>
+    </div>
+
+    <div class="con_s1">
+        <h2>PHOTO LIST</h2>
+        <ul>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+                <span>이미지1</span>
+            </li>
+            <li>
+                <img src="img/photo02.jpg" alt="">
+                <span>이미지2</span>
+            </li>
+            <li>
+                <img src="img/photo03.jpg" alt="">
+                <span>이미지3</span>
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+                <span>이미지4</span>
+            </li>
+            <li>
+                <img src="img/photo02.jpg" alt="">
+                <span>이미지5</span>
+            </li>
+            <li>
+                <img src="img/photo03.jpg" alt="">
+                <span>이미지6</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="con_s2">
+        <h2>PHOTO LIST</h2>
+        <ul>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+                <span>제목</span>
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+                <span>제 목</span>
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+                <span>제목</span>
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/photo01.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+</html>
