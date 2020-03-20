@@ -20,18 +20,17 @@
                 $(".pop span").text(liSpan);
                 btnHide();
             });
-
+            //next
             $(".pop div a").eq(1).on("click", function (e) {
                 e.preventDefault();
                 ++idx;
                 imgBtn();
             });
-
+            //prev
             $(".pop div a").eq(0).on("click", function (e) {
                 e.preventDefault();
                 --idx;
                 imgBtn();
-
             });
 
             function imgBtn() {

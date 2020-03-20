@@ -25,7 +25,6 @@
                     var conOffset = $(".con").eq(i).offset().top;
                     var wScroll = $(window).scrollTop();
                     if (conOffset / 1.5 < wScroll) {
-                        console.log(conOffset);
                         $("header a").eq(i).addClass("active").siblings().removeClass("active");
                     }
                 });

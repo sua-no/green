@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(function () {
             var move = 0;
             var num = 0;
+            $(window).scrollTop(0);
             $("section div").on("mousewheel", function (e) {
                 var delta = e.originalEvent.wheelDelta;
                 //vanila : e.wheelDelta;
@@ -30,14 +32,13 @@
                 function scroll() {
                     $("html").stop().animate({
                         scrollTop: move
-                    }, function () {
+                    }, 1000, "easeInOutQuart", function () {
                         if (delta < 0) {
                             num++;
 
                         } else {
                             num--;
                         }
-                        console.log(num);
                     });
                 }
             });

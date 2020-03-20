@@ -10,9 +10,11 @@
         $(function () {
             //1. 헤더가 상단으로 부터 위치 값
             var headOffset = $("header").offset().top;
+            console.log(headOffset);
             //2. 스크롤 이벤트 발생
             $(window).on("scroll", function () {
                 var wScroll = $(window).scrollTop();
+                console.log(wScroll);
                 //3.헤더와 스크롤 수치를 비교
                 if (headOffset <= wScroll) {
                     $("header").addClass("active");
