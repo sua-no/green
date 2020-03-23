@@ -19,7 +19,6 @@ window.addEventListener("DOMContentLoaded", function () {
             idx = this.dataset.id;
             classToggle();
             clickImg();
-            btnHide();
         });
     }
 
@@ -28,14 +27,12 @@ window.addEventListener("DOMContentLoaded", function () {
         idx++;
         imgChange();
         clickImg();
-        btnHide();
     });
     prevBtn.addEventListener("click", function (e) {
         e.preventDefault();
         idx--;
         imgChange();
         clickImg();
-        btnHide();
     });
 
     function classToggle() {
@@ -53,6 +50,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function clickImg() {
         popImg.setAttribute("src", figImg);
         popTxt.textContent = figcaption;
+        btnHide();
     }
 
     function btnHide() {

@@ -9,27 +9,30 @@
     <script>
         $(function () {
             var num = 0,
-                move = 0;
-            $("section").css("top", "0px");
+                move = 0,
+                bln = true;
+            $("html").scrollTop(0);
             $('section div').on('mousewheel', function (e) {
                 var delta = e.originalEvent.wheelDelta;
-                //var delta = e.wheelDelta;
-                if (delta < 0) { //휠 내렸을 때 -값
-                    move = $(this).next().offset().top;
-                } else { //휠 올렸을 때 +값
-                    move = $(this).prev().offset().top;
-                }
-                console.log(move);
-            });
-            $("section").stop().animate({
-                top: -move
-            }, 1000, function () {
-                if (delta < 0) {
-                    num++;
-                } else {
-                    num--;
+                if (bln) {
+                    bln = false;
+                    if (delta < 0) {
+                        num++;
+                    } else {
+                        num--;
+                    }
+                    move = num * $(window).height();
+                    $("section").animate({
+                        top: -move
+                    }, 1000, function () {
+                        bln = true;
+                    });
                 }
             });
+            // var a = $('section div').eq(0).offset().top;
+            // var b = $('section div').eq(0).position().top;
+            // console.log("offset : " + a);
+            // console.log("position : " + b);
 
         });
     </script>

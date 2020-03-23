@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link src="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //start
+            var parentNode = $("section");
+            var dragBln;
+            var offset = {
+                x: 0,
+                y: 0
+            };
+
+            parentNode.on('mousedown', function (e) {
+                //console.log("누르고 있다");
+                dragBln = true;
+                offset.x = e.offsetX;
+                offset.y = e.offsetY;
+            });
+            parentNode.on('mousemove', function (e) {
+                //console.log("움직이고 있다");
+                if (dragBln) {
+                    console.log("드래그 중");
+
+
+                    if (e.target.nodeName == "DIV") {
+                        $("section div").css({
+                            left: e.pageX - offset.x,
+                            top: e.pageY - offset.y
+
+                        });
+                    }
+                    //if(e.target.nodeName != "DIV") return;
+                    //    $("section div").css({
+                    //         left: e.pageX,
+                    //         top: e.pageY
+
+                    //     });
+                    // 
+                }
+            });
+            parentNode.on('mouseup', function (e) {
+                //console.log("뗐다");
+                dragBln = false;
+            });
+            //end
+        });
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <div>01</div>
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {}
+
+        section {
+            position: relative;
+            height: 800px;
+            border: 5px solid #f00;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            position: absolute;
+        }
+    </style>
+
+
+</body>
+
+</html>

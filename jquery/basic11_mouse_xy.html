@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link src="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //start
+            $(window).on('mousemove', function (e) {
+                // console.log('clientX'+e.clientX);
+                // console.log('pageX='+e.pageX);
+                // console.log('offsetX='+e.offsetX);
+                console.log(e.clientY); // 브라우저 창 안에서의 위치 (viewport)
+                console.log(e.pageY); //페이지 안에서의 위치 (document)
+                console.log(e.offsetY); //부모에서의 위치 (element에서부터)
+                if ($(window).width() / 2 < e.clientX) {
+                    console.log("우측");
+                } else {
+                    console.log("좌측");
+                }
+            });
+
+            //end
+        });
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <div>01</div>
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {}
+
+        section {
+            position: relative;
+            height: 800px;
+            border: 5px solid #f00;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #f00;
+        }
+    </style>
+
+
+</body>
+
+</html>
