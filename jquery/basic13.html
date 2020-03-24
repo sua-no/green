@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            // axis : 방향 , revert : 현재 자리 기억해서 드래그 놓을 때 돌아감, containment : 부모 영역 안에서만 드래그 가능
+            $(".drag").draggable({
+                //axis: "y", //x
+                revert: true,
+                start: function () {
+                    console.log("start")
+                },
+                drag: function () {
+                    console.log("drag")
+                },
+
+                stop: function () {
+                    console.log("stop")
+                }
+
+            });
+            $(".drop").droppable();
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="drag"></div>
+    <div class="drop"></div>
+
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+
+        }
+
+        .drop {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background: #f00;
+        }
+    </style>
+</body>
+
+</html>

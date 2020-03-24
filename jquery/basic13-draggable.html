@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            let length = $(".slide li").length;
+            let ul = document.querySelector(".slide ul");
+            let idx = 0;
+            let posStart, posStop;
+            for (var i = 0; i < length; i++) {
+                //ul.children[i].style.left = i * 100 +"%"; // vanila
+                $(".slide li").eq(i).css({
+                    left: i * 100 + "%"
+                });
+            }
+            $(".slide ul").draggable({
+                axis: "x",
+                start: function (e) {
+                    console.log(e.pageX);
+                    posStart = e.pageX;
+
+                },
+                drag: function (e) {
+                    console.log(e);
+                },
+                stop: function (e) {
+                    console.log(e.pageX);
+                    draging();
+                    posStop = e.pageX;
+                    if (posStart > posStop && (posStart - posStop) > 150) {
+                        console.log("좌측");
+                        console.log(posStart - posStop);
+                        idx++;
+
+                    } else if (posStart < posStop && (posStop - posStart) > 150) {
+                        console.log("우측");
+                        console.log(posStop - posStart);
+                        idx--;
+                    }
+                }
+            });
+
+            function draging() {
+                $(".slide ul").stop().animate({
+                    left: -idx * 100 + "%"
+                });
+            }
+            let ban = document.querySelector(".ban");
+            ban.addEventListener("dragstart", function () {
+                //dragstart
+                //dragend
+                //dragover
+                //dragenter
+                //dragleave
+                console.log("dragstart");
+            });
+            ban.addEventListener("dragend", function () {
+                console.log("dragend");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="ban" draggable="true">asdfjkl</div>
+    <div class="slide">
+        <ul>
+            <li>slide 01</li>
+            <li>slide 02</li>
+            <li>slide 03</li>
+            <li>slide 04</li>
+        </ul>
+    </div>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .slide {
+            width: 300px;
+            height: 300px;
+            border: 5px solid #f00;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+        }
+
+        li {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            background: #ddd;
+            position: absolute;
+            float: left;
+        }
+    </style>
+</body>
+
+</html>
