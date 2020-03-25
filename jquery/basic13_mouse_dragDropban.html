@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link src="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script>
+        $(function () {
+            //start
+            var drag = document.querySelector('.drag');
+            var drop = document.querySelector('.drop');
+
+            drag.addEventListener('dragstart', function () {
+                //console.log('dragStart');   
+                setTimeout(function () {
+                    drag.classList.add('visible');
+                }, 10);
+            });
+
+            drag.addEventListener('dragend', function () {
+                //console.log('dragEnd');  
+                drag.classList.remove('visible');
+            });
+            drop.addEventListener("dragover", function (e) {
+                e.preventDefault(); //drop이벤트보다 우선순위 높아서 기본 이벤트 제거
+                console.log("dragover");
+            });
+            drop.addEventListener("dragenter", function () {
+                console.log("dragenter");
+                drop.classList.add("active");
+            });
+            drop.addEventListener("dragleave", function () {
+                console.log("dragleave");
+                drop.classList.remove("active");
+
+            });
+            drop.addEventListener("drop", function () {
+                drop.append(drag);
+            })
+            //end
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <div class="drag" draggable="true"></div>
+    <div class="drop">
+
+
+
+    </div>
+
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+        }
+
+        .visible {
+            visibility: hidden;
+        }
+
+        .drop {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background: #f00;
+        }
+
+        .active {
+            background: yellow;
+        }
+    </style>
+
+
+
+
+</body>
+
+</html>

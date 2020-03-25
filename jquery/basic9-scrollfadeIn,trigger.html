@@ -15,14 +15,16 @@
                 $("div").each(function (i) {
                     var con = $("div").eq(i).offset().top;
 
-                    if (con - windowHeight < sTop) { //con - windowHeight = 브라우저아래 컨텐츠 걸리는 스크롤 (=컨텐츠 머리가 브라우저 바닥에 닿았냐)
+                    if (con - windowHeight <
+                        sTop
+                        ) { //con - windowHeight = 브라우저아래 컨텐츠 걸리는 스크롤 (=컨텐츠 머리가 브라우저 바닥에 닿았냐)
                         $("div").eq(i).css({
                             marginTop: 100,
                             opacity: 1
 
                         });
                     }
-                })
+                });
 
             });
             $(window).trigger("scroll"); //trigger : 이벤트 강제 실행. vanila : dispatchEvent()
