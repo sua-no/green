@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var sTop = 0; //현재스크롤 위치 변수 선언
+            $(window).on("scroll", function () { //윈도우 스크롤 이벤트 
+                var windowHeight = $(window).height(); //브라우저 높이 변수 선언
+                sTop = $(this).scrollTop(); // 현재 스크롤 위치 변수에 할당
+                $("div").each(function (i) { // 각 div의 offsettop 변수에 할당하는 함수
+                    var con = $("div").eq(i).offset().top; //offsettop 변수 선언
+
+                    if (con - windowHeight < //조건문 실행 (offsettop - windowheight < 현재 스크롤 위치)
+                        sTop
+                        ) { //con - windowHeight = 브라우저아래 컨텐츠 걸리는 스크롤 (=컨텐츠 머리가 브라우저 바닥에 닿았냐)
+                        $("div").eq(i).css({ //각 div css margin 100, opacity 1
+                            marginTop: 100,
+                            opacity: 1
+
+                        });
+                    }
+                });
+
+            });
+            $(window).trigger("scroll"); //window 에 trigger : 이벤트 강제 실행. vanila : dispatchEvent()
+        });
+    </script>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <style>
+        div {
+            width: 400px;
+            height: 500px;
+            background: #aaa;
+            margin: 0 auto;
+            margin-top: 200px;
+            opacity: 0;
+            transition: 1s;
+        }
+    </style>
+</body>
+
+</html>

@@ -33,7 +33,7 @@ var button = lyPop.querySelectorAll('div a');
 button[0].addEventListener('click',function(e){
     //prev
     e.preventDefault();
-    e.stopPropagation();    
+    e.stopPropagation(); //먼저 이벤트 실행 할 수있음 
     changeGallery("previousElementSibling");
     
 });
@@ -46,7 +46,7 @@ button[1].addEventListener('click',function(e){
 });
 
 function changeGallery(nextBack){
-   
+    try{
         var imgNode = eval("target."+nextBack+".querySelector('img')");
     
         var txtNode = eval("target."+nextBack+".querySelector('figcaption')");
@@ -56,7 +56,7 @@ function changeGallery(nextBack){
 
         target = eval("target."+nextBack);
         console.log('데이터가 바뀌고 있음');
-        try{ }catch{
+       }catch{
         console.log('더이상 데이터가 없습니다.');
     }finally{
         //무조건 실행
