@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script2.js"></script>
+    <style>
+        header {
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            text-align: center;
+            background: #ddd;
+
+        }
+
+        header a.active {
+            background: #fff;
+        }
+
+        section {
+            height: 900px;
+            margin-top: 40px;
+        }
+
+        section:nth-of-type(even) {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a data-id="0" href="" class="active">Navi01</a>
+            <a data-id="1" href="">Navi02</a>
+            <a data-id="2" href="">Navi03</a>
+            <a data-id="3" href="">Navi04</a>
+        </nav>
+    </header>
+    <section class="con">contents_01</section>
+    <section class="con">contents_02</section>
+    <section class="con">contents_03</section>
+    <section class="con">contents_04</section>
+</body>
+
+</html>

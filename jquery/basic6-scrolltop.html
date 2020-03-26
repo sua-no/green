@@ -8,24 +8,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $("header a").on("click", function () {
-                event.preventDefault();
-                var idx = $(this).index();
-                var offsetTop = $(".con").eq(idx).offset().top;
-                var headerHeight = $("header").innerHeight();
+            $("header a").on("click", function () { //a클릭 이벤트
+                event.preventDefault(); //preventDefault
+                var idx = $(this).index(); //클릭한 a 의 index 변수 할당
+                var offsetTop = $(".con").eq(idx).offset().top; //컨텐츠의 offsettop 변수 할당
+                var headerHeight = $("header").innerHeight(); //header의 높이
                 //$(window).scrollTop(offsetTop); // 해당위치로 스크롤 이동
                 //클릭시 scroll 이동
-                $("html").animate({
+                $("html").animate({ //스크롤 애니메이션 scrolltop = offset-headerHeight
                     scrollTop: offsetTop - headerHeight
                 });
             });
             //scroll event
-            $(window).on("scroll", function () {
-                $(".con").each(function (i) {
-                    var conOffset = $(".con").eq(i).offset().top;
-                    var wScroll = $(window).scrollTop();
-                    if (conOffset / 1.5 < wScroll) {
-                        $("header a").eq(i).addClass("active").siblings().removeClass("active");
+            $(window).on("scroll", function () { //스크롤 이벤트
+                $(".con").each(function (i) { // 반복문 실행
+                    var conOffset = $(".con").eq(i).offset().top; //컨텐츠의 offsettop
+                    var wScroll = $(window).scrollTop(); //window의 scrolltop
+                    if (conOffset / 1.5 < wScroll) { //조건문 실행
+                        $("header a").eq(i).addClass("active").siblings().removeClass("active"); //해당 컨텐츠에 클래스 추가. 나머지 제거 (흰색 불)
                     }
                 });
             });
