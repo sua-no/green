@@ -1,0 +1,25 @@
+{
+    "portfolio": [
+        {"work1":[
+            {"thum":"img/img_01-thum.jpg"},
+            {"detail":"img/img_01.jpg"},
+            {"name":"쿠팡"},
+            {"time":"24"},
+            {"link":"http://naver.com"}
+        ]},
+        {"work2":[
+            {"thum":"img/img_02-thum.jpg"},
+            {"detail":"img/img_02.jpg"},
+            {"name":"위메프"},
+            {"time":"24"},
+            {"link":"http://kakao.com"}
+        ]},
+        {"work3":[
+            {"thum":"img/img_03-thum.jpg"},
+            {"detail":"img/img_03.jpg"},
+            {"name":"쿠팡"},
+            {"time":"24"},
+            {"link":"http://naver.com"}
+        ]}
+    ]   
+}

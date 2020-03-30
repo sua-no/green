@@ -18,19 +18,31 @@ $(function () {
 
         }, //문서로드 완료 시점 발생(로딩바 display:none)
         success: function (data) {
-            setTimeout(function () {
-                let imgTag = "";
-                $(data).find("item").each(function (i) { //i : index
-                    //console.log($(this).text());
-                    //console.log($(this).index());
-                    if (i < 3) {
-                        imgTag = "<img src=" + $(this).text() + ">";
-                        $("section").append(imgTag);
-                    }
+            var imgTag = '',
+                itemRow = 3,
+                first = 0,
+                last = itemRow;
 
+            setTimeout(function () {
+                function getItem() {
+                    $(data).find('item').each(function (i) {
+
+                        if (first <= i && i < last) {
+                            imgTag = "<img src=" + $(this).text() + ">";
+                            $('section').append(imgTag);
+
+                            $('section img').eq(i).hide().fadeIn();
+                        }
+                    });
+                }
+                getItem()
+                //$('section').html(imgTag);
+                $('section').fadeIn();
+                $('button').on('click', function () {
+                    first += itemRow;
+                    last += itemRow;
+                    getItem();
                 });
-                //$("section").html(imgTag); //변수에 할당연산자 사용하여 한번에 담아서 html에 한번에 추가. 
-                $("section").fadeIn(3000);
             }, 2000);
 
 
