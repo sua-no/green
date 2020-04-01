@@ -10,11 +10,26 @@ $(function () {
             var photo = '',
                 pop = '',
                 text = '',
-                idx = 0;
-            $(data).find('article').each(function () {
-                photo = '<article class="thumb">' + $(this).html() + '</article>';
+                idx = 0,
+                full, thum, title, contents;
+            // $(data).find('article').each(function () {
+            //     photo = '<article class="thumb">' + $(this).html() + '</article>';
+            //     $('#main').append(photo);
+            // });
+            $(data).find("item").each(function (i) {
+                photo = '<article class="thumb"></article>';
                 $('#main').append(photo);
+                full = $(this).find("full").text();
+                thum = $(this).find("thum").text();
+                title = $(this).find("title").text();
+                contentsAppend(i);
             });
+            function contentsAppend(idx) {
+                contents = "<a href='" + full + "' class='image'></a>";
+                contents += "<img src='" + thum + "'></a>";
+                contents += "<h2>" + title + "</h2>"
+                $("article").eq(idx).append(contents);
+            }
             $('#main').on('click', 'article', function (e) {
                 e.preventDefault();
                 $('.poptrox-overlay').show();
@@ -49,7 +64,6 @@ $(function () {
                 pop = $('article').eq(idx).find('a').attr('href');
                 text = $('article').eq(idx).find('h2').text();
                 $('.poptrox-popup .pic img').attr('src', pop);
-                console.log(pop);
                 $('.caption').text(text);
             }
 
