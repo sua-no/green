@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BRACKETS 으로 시작하기</title>
+    <meta name="description" content="Brackets에 대한 대화식 시작 안내서입니다.">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+
+<body>
+    <h1>약관동의</h1>
+    <form name="join">
+        <p><input type="checkbox" placeholder="name" name="all">전체동의</p>
+        <p><input type="checkbox" name="poll"> 개인정보동의</p>
+        <p><textarea cols=50 rows=10>개인정보 내용</textarea></p>
+        <p><input type="checkbox" name="agree">약관동의</p>
+        <p><textarea cols=50 rows=10>약관동의 내용</textarea></p>
+        <p><input type="button" name="yes" value="확인"><input type="reset"></p>
+    </form>
+
+
+    <script>
+        join.all.addEventListener("click", function () {
+            //console.log(this.value); //on "클릭했다"
+            //console.log(this.checked); //ture false
+            join.poll.checked = this.checked;
+            join.agree.checked = this.checked;
+        });
+        join.yes.addEventListener("click", function () {
+            //location.href = "join2.html"; //해당 페이지로 넘어감
+            // if (join.poll.checked && join.agree.checked) {
+            //     join.action = "join2.html"; //join이라는 폼 요소 안에 데이터가 있으면 그 데이터들을 가지고 넘어감
+            //     join.submit();
+            // } else {
+            //     alert("개인정보동의를 체크해 주세요");
+            // }
+            if (!check(join.poll, "개인정보동의를 체크해 주세요")) {
+                return false;
+            }
+            if (!check(join.agree, "약관동의를 체크해 주세요")) {
+                return false;
+            }
+            function check(id, message) {
+                if (id.checked) {
+                    return true;
+                }
+                alert(message);
+            }
+            join.action = "join2.html";
+            join.submit();
+        });
+    </script>
+
+
+</body>
+
+</html>
