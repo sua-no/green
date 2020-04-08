@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            animation: clip 2s alternate infinite;
+        }
+
+        @keyframes clip {
+            0% {
+                clip-path: polygon(50% 0%, 100% 0, 100% 36%, 100% 53%, 100% 99%, 50% 100%, 24% 100%, 0 100%, 0 35%, 0 0);
+            }
+
+            100% {
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="300" height="300">
+        <mask id=mask>
+            <image xlink:href="data:image/jpeg">
+        </mask>
+        <text x="0" y="100" font-size="100" mask="url(#mask)">SUA</text>
+    </svg>
+    <img src="img_01.jpg" alt="">
+</body>
+
+</html>
