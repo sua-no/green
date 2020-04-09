@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 200px;
+            margin: 20px 0 0 20px;
+        }
+
+        .g1 {
+
+            background: linear-gradient(to top, #f00, #000);
+            background: linear-gradient(90deg, #f00 80%, #000 60%);
+        }
+
+        .g2 {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #f00, #000 50%);
+            background: radial-gradient(at 80% 60%, #f00, #000 60%);
+            /* at : 기준점 변경 */
+
+        }
+
+        .g3 {
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(from 0deg, #f00 1%, #000 0%);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .g3 p {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: #fff;
+            margin: 0;
+            text-align: center;
+            line-height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3">
+        <p data-p="70">0%</p>
+    </div>
+    <script>
+        var g3 = document.querySelector(".g3");
+        var i = 0,loop;
+        
+        function skill(k){
+            var loop = setInterval(function () {
+            if(i == k){
+                clearInterval(loop);
+                return;
+            }
+            i++;
+            g3.children[0].textContent = i+"%";
+            g3.style.background = `conic-gradient(from 0deg, #f00 ${i}%, #000 0%)`;
+        }, 10);
+        }
+        skill(g3.children[0].dataset.p);     
+    </script>
+</body>
+
+</html>
