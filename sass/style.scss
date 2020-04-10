@@ -1,0 +1,24 @@
+$color : #eee;
+@mixin after($dis){
+    &:after{
+        content: '';
+        clear: both;
+        display: $dis;
+    }
+}
+html,body{
+    margin: 0 auto;
+}
+header{
+    background: $color;
+    @include after(block);
+    h1{font-size: 2em; float: left;}
+    nav{       
+        float: right;
+        a{
+            display: inline-block;
+        }
+    }
+}
+
+
