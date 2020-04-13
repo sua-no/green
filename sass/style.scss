@@ -1,3 +1,4 @@
+@import "_common";
 $color : #eee;
 @mixin after($dis){
     &:after{
