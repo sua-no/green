@@ -50,12 +50,13 @@ section{
         li{
             width: 30%;
             height: 320px;
-        }
-        @for $i from 1 to 4{
-            li:nth-of-type(#{$i}){
-                background: url("img/img_0#{$i}.jpg") no-repeat center center;
+            @for $i from 1 to 4{
+                &:nth-of-type(#{$i}){
+                    background: url("img/img_0#{$i}.jpg") no-repeat center center;
+                }
             }
         }
+        
     }
 }
 /* https://velopert.com/1712 */
