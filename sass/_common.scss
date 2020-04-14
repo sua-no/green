@@ -1,3 +1,13 @@
+/* ul{명령}
+ul{@extend %aa;}
+li{@extend %aa;}
+css > ul,li
+
+ul{명령}
+li{@extend ul;}
+a{@extend ul;}
+css > li,a{ul태그 명령 추가}
+     */
 %listType{
     list-style-type: none;
 }
@@ -5,9 +15,10 @@ html,body {
     margin: 0;
     padding: 0;
 }
-ul,li {
-    @extend %listType;
-    padding: 0;
+%ul {list-style-type: none;}
+li{
+    @extend %ul;
+
 }
 a {
     text-decoration: none;
