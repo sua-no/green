@@ -1,0 +1,250 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+nav ul,
+li {
+  list-style: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background: transparent;
+  text-decoration: none;
+  display: block; }
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer; }
+
+.wrap {
+  width: 100%;
+  padding: 170px 360px;
+  box-sizing: border-box; }
+
+.con1 {
+  width: 100%;
+  height: 980px;
+  margin-bottom: 185px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between; }
+  .con1 figure {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .con1 figure:nth-of-type(1) figcaption {
+      order: 1; }
+      .con1 figure:nth-of-type(1) figcaption:after {
+        display: block;
+        content: '';
+        width: 155px;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        left: -15px;
+        top: 16px; }
+    .con1 figure:nth-of-type(1) img {
+      order: 2; }
+    .con1 figure:nth-of-type(2) figcaption {
+      padding: 0 155px 0 0; }
+      .con1 figure:nth-of-type(2) figcaption:after {
+        display: block;
+        content: '';
+        width: 155px;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        left: 355px;
+        top: 16px; }
+    .con1 figure img {
+      width: 616px;
+      height: 367px;
+      display: block;
+      box-shadow: 3px 3px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: .5s; }
+      .con1 figure img:hover {
+        box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3); }
+    .con1 figure figcaption {
+      width: 355px;
+      position: relative;
+      padding-left: 155px; }
+      .con1 figure figcaption h2 {
+        font-size: 40px; }
+      .con1 figure figcaption p {
+        font-size: 15px;
+        margin: 28px 0 22px;
+        line-height: 1.5em; }
+      .con1 figure figcaption button {
+        display: inline-block;
+        font-size: 14px;
+        background: none;
+        font-weight: bold; }
+        .con1 figure figcaption button em {
+          color: #bea67c; }
+
+.con2 {
+  width: 100%;
+  text-align: center; }
+  .con2 h2 {
+    font-size: 48px;
+    position: relative; }
+    .con2 h2:after {
+      display: block;
+      content: '';
+      width: 44px;
+      height: 4px;
+      position: absolute;
+      left: calc(50% - 22px);
+      top: calc(50%- - 2px);
+      margin: 25px 0;
+      background: #bea67c; }
+  .con2 p {
+    line-height: 1.5em;
+    font-size: 15px;
+    margin: 54px 0 78px; }
+  .con2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .con2 ul li {
+      width: 272px; }
+      .con2 ul li div {
+        box-sizing: border-box;
+        width: 272px;
+        height: 272px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        margin-bottom: 47px;
+        position: relative;
+        overflow: hidden; }
+        .con2 ul li div:before {
+          display: block;
+          content: '';
+          width: 68px;
+          height: 68px;
+          background: rgba(190, 166, 124, 0.8) url("img/play.png") no-repeat center center;
+          position: absolute;
+          left: calc(50% - 34px);
+          top: calc(50% - 34px);
+          border-radius: 50%;
+          z-index: 2; }
+        .con2 ul li div:after {
+          display: flex;
+          content: '';
+          width: 25px;
+          height: 1px;
+          background: #bea67c;
+          position: absolute;
+          left: calc(50% - 12px);
+          bottom: -32px; }
+        .con2 ul li div img {
+          width: 244px;
+          height: 244px;
+          display: block;
+          position: absolute;
+          left: calc(50% - 122px);
+          top: calc(50% - 122px);
+          overflow: hidden;
+          transition: .35s; }
+        .con2 ul li div:hover img {
+          transform: scale(1.1); }
+
+/*# sourceMappingURL=style.css.map */
