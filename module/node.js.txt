@@ -1,0 +1,17 @@
+node.js
+
+https://docs.google.com/presentation/d/1SH_orUdlOayE3faVQxspfExR1rJ9RfjrjM5hob5M4Gk/edit#slide=id.g7906d5e63b_0_15
+
+-node.js다운
+-nods -v : 버전확인
+-npm -v
+-npm init -y : package json 설치
+-npm install -D webpack webpack-cli : node modules 설치
+-modules > webpack-cli 폴더
+-npx webpack --entry ./comon.js --output ./com_bundle.js
+ -> com_bundle.js 만들어짐 (모든 js파일 합친것)
+-npx webpack --config config.js
+
+
+https://webpack.js.org/
+-webpack 명령어 검색
